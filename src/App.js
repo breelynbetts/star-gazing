@@ -12,7 +12,7 @@ const App = () => {
   // is equivalent to an overall initialization routine. Note however that every component
   // can have its own useEffect, and so initialization can be separated on a per-component
   // basis.
-  useEffect(() => apiHost('http://api.giphy.com/v1/'))
+  useEffect(() => apiHost('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos'))
 
   // When React components are implemented as functions, their return value is the component’s
   // content (i.e., what the render() method returns for class-based components).

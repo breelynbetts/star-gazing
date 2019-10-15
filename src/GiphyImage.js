@@ -6,7 +6,7 @@ const GiphyImage = props => {
   const { image } = props
   return (
     <div className="GiphyImage">
-      <img src={image.images.fixed_width.url} alt={image.source_tld} />
+      <img src={image.img_src} alt={image.earth_date} />
     </div>
   )
 }
