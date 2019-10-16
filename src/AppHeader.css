@@ -19,6 +19,7 @@
   grid-template-columns: repeat(4, auto);
   align-items: center;
   justify-items: center;
+  padding-right: 0px;
 
 }
 
@@ -29,25 +30,32 @@
 }
 .Home {
   grid-area: nav;
-  height: 60px;
+  height: 38px;
 }
 .Game {
   grid-area: nav;
-  height: 60px;
+  height: 38px;
 }
 .Apod {
   grid-area: nav;
-  height: 60px;
+  height: 38px;
 }
 
-.Nav a {
+.Nav ul {
+  list-style: none;
+  display: flex;
+  margin-bottom: 20px;
+
+}
+
+.Nav li {
   color: black;
   font-size: 20px;
   font-weight: 500;
   transition: 0.5s;
   text-decoration: none;
 }
-.Nav a:hover {
+.Nav li:hover {
   transform: scale(1.1);
 }
 .Nav button {
