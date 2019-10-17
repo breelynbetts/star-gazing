@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import './SearchForm.css'
+import './style/SearchForm.css'
 
 import SearchResults from './SearchResults'
 
@@ -30,24 +30,25 @@ const SearchForm = () => {
   }
 
   return (
-    <form className="SearchForm" onSubmit={performQuery}>
+    <div>
+      <form className="SearchForm" onSubmit={performQuery}>
 
 
-      <input name="query" type="text" value={query} onChange={handleQueryChange} />
+        <input name="query" type="text" value={query} onChange={handleQueryChange} />
 
-      <div className="ButtonBar">
-        <button type="submit" disabled={!query}>Search Giphy!</button>
-      </div>
-
-      {error && (
-        <div className="error">
-          {error}
-          <p>Error has occurred!</p>
+        <div className="ButtonBar">
+          <button type="submit" disabled={!query}>Search</button>
         </div>
-      )}
 
+        {error && (
+          <div className="error">
+            {error}
+            <p>Error has occurred!</p>
+          </div>
+        )}
+      </form>
       <SearchResults results={images} />
-    </form>
+    </div>
   )
 }
 

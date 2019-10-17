@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import './SearchResults.css'
+import './style/SearchResults.css'
 
 import NASAImage from './NASAImage'
 

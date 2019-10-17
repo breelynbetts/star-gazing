@@ -1,6 +1,6 @@
 import React from 'react'
 
-import "./NASAImage.css"
+import "./style/NASAImage.css"
 
 const NASAImage = props => {
   const { image } = props

@@ -5,10 +5,9 @@ import About from './pages/About.js';
 import Contact from './pages/Contact.js';
 import Blog from './pages/Blog.js';
 import Home from './pages/Home.js';
-import logo from './logo.jpg';
-import './App.css'
-
-
+import logo from './media/logo.jpg';
+import * as Icon from 'react-feather';
+import './style/App.css'
 
 import { apiHost } from './api'
 
@@ -25,25 +24,25 @@ const App = () => {
     {
       text: "Home",
       path: "/",
-      icon: "ion-ios-home"
+      icon: <Icon.Home color='black' />
     },
     {
       text: "Blog",
       path: "/blog",
-      icon: "ion-ios-home"
+      icon: <Icon.Search color='black' />
     },
     {
       text: "Contact",
       path: "/contact",
-      icon: "ion-ios-home"
+      icon: <Icon.Star color='black' />
     },
     {
       text: "About",
       path: "/about",
-      icon: "ion-ios-home"
+      icon: <Icon.Compass color='black' />
     }
   ]
-  
+
   return (
     <div className="App">
       <NavBar 

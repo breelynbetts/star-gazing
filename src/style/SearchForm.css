@@ -1,0 +1,42 @@
+/* .SearchForm {
+  grid-area: logo;
+  display: inline;
+  flex-direction: column;
+  margin-top: 0;
+} */
+
+.SearchForm > .ButtonBar {
+  display: inline;
+}
+
+/* .SearchForm > .ButtonBar > button {
+  margin-left: auto;
+  margin-top: 1rem;
+}
+
+.SearchForm .error {
+  background-color: pink;
+  border: solid 1px red;
+  color: maroon;
+  margin: 1rem;
+  padding: 1rem;
+} */
+
+.SearchForm {
+  font-size: 16px;
+  border: solid 1px #dbdbdb;
+  border-radius: 3px;
+  color: #262626;
+  padding: 7px 33px;
+  border-radius: 3px;
+  color: #999;
+  cursor: text;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+  background: #fafafa;
+  /* &:active,
+  &:focus {
+    text-align: left;
+  } */
+}

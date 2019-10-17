@@ -1,0 +1,31 @@
+.navDiv {
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
+    max-width: 1010px;
+}
+
+.nav {
+    max-width: 1010px;
+    padding: 26px 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+.image-logo {
+    width: 33.333%;
+    text-align: left;
+}
+
+.search-bar {
+    width: 33.333%;
+    text-align: center;
+}
+
+
+ul {
+    list-style: none;
+    display: flex;
+    margin-left: 0%;
+}
+

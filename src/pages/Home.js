@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
+import SearchForm from "../SearchForm.js";
 
 class Home extends Component {
     render () {
         return (
-            <div>Home</div>
+            <h1>Home</h1>
         )
     }
 }
