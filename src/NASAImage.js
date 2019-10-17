@@ -1,14 +1,14 @@
 import React from 'react'
 
-import './GiphyImage.css'
+import "./NASAImage.css"
 
-const GiphyImage = props => {
+const NASAImage = props => {
   const { image } = props
   return (
-    <div className="GiphyImage">
+    <div className="NASAImage">
       <img src={image.img_src} alt={image.earth_date} />
     </div>
   )
 }
 
-export default GiphyImage
+export default NASAImage

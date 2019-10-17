@@ -20,7 +20,6 @@ const SearchForm = () => {
 
     try {
       const result = await searchGifs({
-        rating: 'pg-13',
         q: query
       })
 
@@ -32,7 +31,7 @@ const SearchForm = () => {
 
   return (
     <form className="SearchForm" onSubmit={performQuery}>
-      <p>Enter a search term:</p>
+
 
       <input name="query" type="text" value={query} onChange={handleQueryChange} />
 
@@ -43,6 +42,7 @@ const SearchForm = () => {
       {error && (
         <div className="error">
           {error}
+          <p>Error has occurred!</p>
         </div>
       )}
 

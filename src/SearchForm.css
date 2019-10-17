@@ -1,11 +1,12 @@
 .SearchForm {
-  display: flex;
+  grid-area: logo;
+  display: inline;
   flex-direction: column;
-  margin-top: 100px;
+  margin-top: 0;
 }
 
 .SearchForm > .ButtonBar {
-  display: flex;
+  display: inline;
 }
 
 .SearchForm > .ButtonBar > button {

@@ -23,6 +23,12 @@
 
 }
 
+.Search {
+  grid-area: search;
+  display: grid;
+  align-items: center;
+}
+
 .Logo {
   grid-area: logo;
   height: 70px;
