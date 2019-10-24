@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 
-import './style/SearchForm.css'
+import './SearchForm.css'
 
 import SearchResults from './SearchResults'
 
-import { searchGifs } from './api'
+import { searchNasa } from './api'
 
 const SearchForm = () => {
   const [error, setError] = useState(null)
@@ -19,7 +19,7 @@ const SearchForm = () => {
     setError(null)
 
     try {
-      const result = await searchGifs({
+      const result = await searchNasa({
         q: query
       })
 
@@ -28,11 +28,10 @@ const SearchForm = () => {
       setError('Sorry, but something went wrong.')
     }
   }
-
+  
   return (
     <div>
       <form className="SearchForm" onSubmit={performQuery}>
-
 
         <input name="query" type="text" value={query} onChange={handleQueryChange} />
 
