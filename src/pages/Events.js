@@ -6,7 +6,7 @@ class Events extends Component {
         return (
             <div>
                 <h1>Current Events</h1>
-                <p>Click on a category below to see events in that category!</p>
+                <p>Click on a category below to see current events!</p>
             </div>
         )
     }
