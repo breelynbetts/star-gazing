@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import './SearchForm.css'
+import './style/SearchForm.css'
 
 import SearchResults from './SearchResults'
 
