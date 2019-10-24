@@ -2,7 +2,7 @@ import React from 'react'
 import { Router } from '@reach/router';
 import NavBar from './NavBar.js';
 import PicOfDay from '../pages/PicOfDay.js';
-import Feed from '../pages/Feed.js';
+import Events from '../pages/Events.js';
 import Search from '../pages/Search.js';
 import Home from '../pages/Home.js';
 import logo from '../media/logo.jpg';
@@ -21,8 +21,8 @@ const Header = () => {
           icon: <Icon.Search color='black' />
         },
         {
-          text: "Feed",
-          path: "/feed",
+          text: "Events",
+          path: "/events",
           icon: <Icon.Compass color='black' />
         },
         {
@@ -43,7 +43,7 @@ const Header = () => {
           />
           <Router>
             <Home path="/"/>
-            <Feed path="/feed" />
+            <Events path="/events" />
             <Search path="/search" /> 
             <PicOfDay path ="/picofday" />
           </Router>
