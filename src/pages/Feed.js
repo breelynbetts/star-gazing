@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 
-class Contact extends Component {
+class Feed extends Component {
     render () {
         return (
-            <div>Contact</div>
+            <div>Feed</div>
         )
     }
 }
 
-export default Contact
+export default Feed
