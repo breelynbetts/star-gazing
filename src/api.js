@@ -173,40 +173,97 @@ const searchAstronomyPicture = () => Promise.resolve({
 
 const searchEvents = () => Promise.resolve({
   data: [{
-      "title": "EONET Event Categories",
-      "description": "List of all the available event categories in the EONET system",
-      "link": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/categories",
-      "categories": [
-        {
-          "id": 6,
-          "title": "Drought",
-          "link": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/categories/6",
-          "description": "Long lasting absence of precipitation affecting agriculture and livestock, and the overall availability of food and water.",
-          "layers": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/layers/6"
-        },
-        {
-          "id": 7,
-          "title": "Dust and Haze",
-          "link": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/categories/7",
-          "description": "Related to dust storms, air pollution and other non-volcanic aerosols. Volcano-related plumes shall be included with the originating eruption event.",
-          "layers": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/layers/7"
-        },
-        {
-          "id": 13,
-          "title": "Water Color",
-          "link": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/categories/13",
-          "description": "Related to events that alter the appearance of water: phytoplankton, red tide, algae, sediment, whiting, etc.",
-          "layers": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/layers/13"
-        },
-        {
-          "id": 8,
-          "title": "Wildfires",
-          "link": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/categories/8",
-          "description": "Wildfires includes all nature of fire, including forest and plains fires, as well as urban and industrial fire events. Fires may be naturally caused or manmade.",
-          "layers": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/layers/8"
-        }
-      ]  
-  }]
+    "title": "EONET Events",
+    "description": "Natural events from EONET.",
+    "link": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/events",
+    "events": [
+      {
+        "id": "EONET_4475",
+        "title": "Wildfires - Los Angeles County (Tick Fire), California, United States",
+        "description": "",
+        "link": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/events/EONET_4475",
+        "categories": [
+          {
+            "id": 8,
+            "title": "Wildfires"
+          }
+        ],
+        "sources": [
+          {
+            "id": "PDC",
+            "url": "http://emops.pdc.org/emops/?hazard_id=96981"
+          }
+        ],
+        "geometries": [
+          {
+            "date": "2019-10-24T18:16:00Z",
+            "type": "Point",
+            "coordinates": [
+              -118.39468413,
+              34.457634347
+            ]
+          }
+        ]
+      },
+      {
+        "id": "EONET_4476",
+        "title": "Wildfires - San Bernardino County (Old Water Fire), California, United States",
+        "description": "",
+        "link": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/events/EONET_4476",
+        "categories": [
+          {
+            "id": 8,
+            "title": "Wildfires"
+          }
+        ],
+        "sources": [
+          {
+            "id": "PDC",
+            "url": "http://emops.pdc.org/emops/?hazard_id=96977"
+          }
+        ],
+        "geometries": [
+          {
+            "date": "2019-10-24T15:11:00Z",
+            "type": "Point",
+            "coordinates": [
+              -117.26913,
+              34.17922
+            ]
+          }
+        ]
+      },
+      {
+        "id": "EONET_4474",
+        "title": "Wildfire -Sonoma County (Kincade Fire), California, United States",
+        "description": "",
+        "link": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/events/EONET_4474",
+        "categories": [
+          {
+            "id": 8,
+            "title": "Wildfires"
+          }
+        ],
+        "sources": [
+          {
+            "id": "PDC",
+            "url": "http://emops.pdc.org/emops/?hazard_id=96971"
+          }
+        ],
+        "geometries": [
+          {
+            "date": "2019-10-24T13:32:00Z",
+            "type": "Point",
+            "coordinates": [
+              -122.807158563,
+              38.758962281
+            ]
+          }
+        ]
+      }
+    ]
+  }  
+  ]
 
 })
 
