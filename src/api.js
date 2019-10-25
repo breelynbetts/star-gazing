@@ -192,69 +192,6 @@ const searchEvents = () => Promise.resolve({
           "layers": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/layers/7"
         },
         {
-          "id": 16,
-          "title": "Earthquakes",
-          "link": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/categories/16",
-          "description": "Related to all manner of shaking and displacement. Certain aftermath of earthquakes may also be found under landslides and floods.",
-          "layers": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/layers/16"
-        },
-        {
-          "id": 9,
-          "title": "Floods",
-          "link": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/categories/9",
-          "description": "Related to aspects of actual flooding--e.g., inundation, water extending beyond river and lake extents.",
-          "layers": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/layers/9"
-        },
-        {
-          "id": 14,
-          "title": "Landslides",
-          "link": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/categories/14",
-          "description": "Related to landslides and variations thereof: mudslides, avalanche.",
-          "layers": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/layers/14"
-        },
-        {
-          "id": 19,
-          "title": "Manmade",
-          "link": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/categories/19",
-          "description": "Events that have been human-induced and are extreme in their extent.",
-          "layers": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/layers/19"
-        },
-        {
-          "id": 15,
-          "title": "Sea and Lake Ice",
-          "link": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/categories/15",
-          "description": "Related to all ice that resides on oceans and lakes, including sea and lake ice (permanent and seasonal) and icebergs.",
-          "layers": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/layers/15"
-        },
-        {
-          "id": 10,
-          "title": "Severe Storms",
-          "link": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/categories/10",
-          "description": "Related to the atmospheric aspect of storms (hurricanes, cyclones, tornadoes, etc.). Results of storms may be included under floods, landslides, etc.",
-          "layers": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/layers/10"
-        },
-        {
-          "id": 17,
-          "title": "Snow",
-          "link": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/categories/17",
-          "description": "Related to snow events, particularly extreme/anomalous snowfall in either timing or extent/depth.",
-          "layers": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/layers/17"
-        },
-        {
-          "id": 18,
-          "title": "Temperature Extremes",
-          "link": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/categories/18",
-          "description": "Related to anomalous land temperatures, either heat or cold.",
-          "layers": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/layers/18"
-        },
-        {
-          "id": 12,
-          "title": "Volcanoes",
-          "link": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/categories/12",
-          "description": "Related to both the physical effects of an eruption (rock, ash, lava) and the atmospheric (ash and gas plumes). ",
-          "layers": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/layers/12"
-        },
-        {
           "id": 13,
           "title": "Water Color",
           "link": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/categories/13",
