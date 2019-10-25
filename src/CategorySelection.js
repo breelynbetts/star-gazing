@@ -27,6 +27,18 @@ function CategorySelection() {
 
     return (
         <div>
+            <form className="CategorySelector" onSubmit={handleSelection}>
+                <input type="text" value={query} onChange={handleQueryChange} />category<br></br>
+                <div className="ButtonBar">
+                    <button type="submit" disabled={!query}>Select Category!</button>
+                </div>
+                {error && (
+                    <div className="error">
+                    {error}
+                    <p>Error has occurred!</p>
+                    </div>
+                )}
+            </form>
             <CategoryResult results={category}/>
         </div>
     )

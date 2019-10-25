@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import EventSelection from './EventSelection.js'
+import CategorySelection from '../CategorySelection.js'
 
 class Events extends Component {
     render () {
@@ -7,6 +7,7 @@ class Events extends Component {
             <div>
                 <h1>Current Events</h1>
                 <p>Click on a category below to see current events!</p>
+                <CategorySelection />
             </div>
         )
     }

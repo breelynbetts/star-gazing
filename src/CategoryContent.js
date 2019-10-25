@@ -1,16 +1,20 @@
 import React from 'react'
+import {Link, Router} from 'react-router-dom';
 
-// import "./style/EventContent.css"
+// import "./style/CategoryContent.css"
 
-const EventContent = props => {
-  const { event } = props
+const CategoryContent = props => {
+  const { category } = props
   return (
-    <div className="EventContent">
-        <h2>{event.title}</h2>
-        <link>{event.categories.link}</link>
-        <p>Description: {event.categories.description}</p>
+    <div className="CategoryContent">
+        <h2>{category.categories[0].title}</h2>
+        {/* <Router>
+          <Link src={category.categories[0].link}>title</Link>
+        </Router> */}
+        <h3>{category.categories[0].link}</h3> 
+        <p>Description: {category.categories[0].description}</p>
     </div>
   )
 }
 
-export default EventContent
+export default CategoryContent
