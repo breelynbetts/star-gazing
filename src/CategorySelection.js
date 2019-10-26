@@ -1,45 +1,32 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { searchEvents } from './api.js'
 import CategoryResult from './CategoryResult.js'
+import axios from "axios"
 
 function CategorySelection() {
-    const [error, setError] = useState(null)
-    const [query, setQuery] = useState('')
-    const [category, setCategory] = useState([])
+    const [data, setCategory] = useState([])
+    const [error, setError] = useState(false)
 
-    const handleQueryChange = event => setQuery(event.target.value)
-
-    const handleSelection = async event => {
-        event.preventDefault()
-
-        setError(null)
-
-        try {
-            const result = await searchEvents ({
-                q: query
-            })
-
-            setCategory(result.data)
-        } catch (error) {
-            setError('Something went wrong.')
-        }
+    async function fetchData() {
+        const response = await fetch('https://eonet.sci.gsfc.nasa.gov/api/v2.1/events?limit=5');
+        response
+            .json()
+            .then(response => setCategory(response))
+            .catch(err => setError(err));
     }
+    useEffect(() => {
+        fetchData();
+    });
 
     return (
         <div>
-            <form className="CategorySelector" onSubmit={handleSelection}>
-                <input type="text" value={query} onChange={handleQueryChange} />category<br></br>
-                <div className="ButtonBar">
-                    <button type="submit" disabled={!query}>Select Category!</button>
-                </div>
-                {error && (
-                    <div className="error">
-                    {error}
-                    <p>Error has occurred!</p>
-                    </div>
-                )}
-            </form>
-            <CategoryResult results={category}/>
+           <span>
+               {JSON.stringify(data)}
+           </span>
+           <hr />
+           <span>
+               {JSON.stringify(error)}
+           </span>
         </div>
     )
 }

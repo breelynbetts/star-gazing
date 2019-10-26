@@ -191,7 +191,7 @@ const searchEvents = () => Promise.resolve({
         "sources": [
           {
             "id": "PDC",
-            "url": "http://emops.pdc.org/emops/?hazard_id=96981"
+            "url": "http://emops.pdc.og/emops/?hazard_id=96981"
           }
         ],
         "geometries": [

@@ -4,7 +4,7 @@ import CategoryContent from './CategoryContent.js'
 
 const CategoryResult = props => (
     <div className="CategoryResults">
-      {props.results.map(category => <CategoryContent category={category} />)}
+      {props.data.map(category => <CategoryContent category={category} />)}
     </div>
 )
 
