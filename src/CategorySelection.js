@@ -1,23 +1,20 @@
 import React, { useEffect, useState } from 'react'
-import { searchEvents } from './api.js'
-import CategoryResult from './CategoryResult.js'
-import axios from "axios"
+import axios from 'axios'
+import CategoryResult from './CategoryResult';
 
 function CategorySelection() {
-    const [data, setCategory] = useState([])
-    const [error, setError] = useState(false)
+    const [data, setData] = useState([])
+    const [loading, setLoading] = useState(true)
+    const url = 'https://eonet.sci.gsfc.nasa.gov/api/v2.1/events?limit=5';
 
-    async function fetchData() {
-        const response = await fetch('https://eonet.sci.gsfc.nasa.gov/api/v2.1/events?limit=5');
-        response
-            .json()
-            .then(response => setCategory(response))
-            .catch(err => setError(err));
-    }
+    
     useEffect(() => {
-        fetchData();
-    });
-
+        axios.get(url).then(json => setData(json.data));
+        setLoading(false);
+      }, []);
+    
+      
+    console.log(data.events);
     return (
         <div>
            <span>
@@ -25,7 +22,19 @@ function CategorySelection() {
            </span>
            <hr />
            <span>
-               {JSON.stringify(error)}
+
+               {data.events == undefined ? <div>{loading}</div> : 
+               <div>
+                   {data.link}
+                   {/* console.log({JSON.stringify(data.events)}); */}
+                   {data.events.map((event) => {
+                       return (
+                           <h1>{event.title}</h1>
+                       )
+                   })}
+               </div>
+                } 
+               
            </span>
         </div>
     )

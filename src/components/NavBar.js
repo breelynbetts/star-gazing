@@ -5,7 +5,7 @@ function NavBar ({ background, hoverBackground, linkColor, navLinks, logo }) {
     const [ navOpen, setNavOpen ] = useState(0)
     // const [ hoverIndex, setHoverIndex ] = useState(-1)
     return (
-        <navDiv>
+        <div>
             <nav
                 className="responsive-toolbar"
                 style={{ background: background }}>
@@ -32,7 +32,7 @@ function NavBar ({ background, hoverBackground, linkColor, navLinks, logo }) {
                     )}
                 </ul>
             </nav>
-        </navDiv>
+        </div>
     )
 }
 
