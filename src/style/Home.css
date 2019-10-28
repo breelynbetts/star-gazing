@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Staatliches&display=swap');
 
-.search {
-    width: 80%;
-    margin-left: 10%;
-    margin-top: 2%;
-}
-
-.searchTitle {
+.homeTitle {
     font-family: 'Staatliches', cursive;
     margin-top: 2%;
-    font-size: 60px;
+    font-size: 75px;
     letter-spacing: 3px;
+    border-bottom: 1px solid black;
+    width: 50%;
+    margin-left: 25%;
+}
+.aboutApp {
+    font-family: 'Montserrat', sans-serif;
 }

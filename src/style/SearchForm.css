@@ -2,3 +2,10 @@
   display: inline;
 }
 
+button:disabled {
+  background-color: white;
+  color: white;
+  
+}
+
+

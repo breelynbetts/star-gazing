@@ -11,12 +11,10 @@ function NavBar ({navLinks}) {
                 <img className='image' src={ logo } height="40px" width="40px" alt="toolbar-logo" />
                 <h1 className='title'>Star Gazing!</h1>
             </figure>
-            {/* <h1 className='title'>Star Gazing!</h1>  */}
             <nav
                 className="responsive-toolbar"
                 >
                 <ul
-                    // className={ navOpen ? 'active' : '' }
                     className='links'
                 >
                         { navLinks.map((link, index) => 
