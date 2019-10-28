@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { searchAstronomyPicture } from './api.js'
 import DateResult from './DateResult.js'
 
+import './style/DateSelector.css'
 
 function DateSelector() {
   const [error, setError] = useState(null)

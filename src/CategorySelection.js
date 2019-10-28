@@ -30,10 +30,12 @@ function CategorySelection() {
                                     {event.geometries.map((loc) => {
                                         return (
                                             <div>
+                                                <p>{loc.date}</p>
                                                 <p>location: 
                                                     {loc.coordinates[0]}, 
                                                     {loc.coordinates[1]}
                                                 </p>
+                                                
                                             </div>
                                         )
                                     })}

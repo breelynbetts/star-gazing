@@ -1,14 +1,17 @@
 import React from 'react'
 
-// import "./style/APODImage.css"
+import "./style/APODImage.css"
 
 const APODImage = props => {
   const { image } = props
   return (
     <div className="APODImage">
-      <img src={image.hdurl} alt={image.date} />
-      <h4>Date Selected: {image.date}</h4>
-      <p>Description: {image.explanation}</p>
+      <img className='apod'src={image.hdurl} alt={image.date} />
+      <h2 className='readTitle'>Read About It!</h2>
+      <div className='descriptionDiv'>
+        <p className='description'>{image.explanation}</p>
+      </div>
+      <h4 className='dateSelected'>Date Selected: {image.date}</h4>
     </div>
   )
 }

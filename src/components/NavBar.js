@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import { Link } from "@reach/router";
+import "../style/NavBar.css";
 
-function NavBar ({ background, hoverBackground, linkColor, navLinks, logo }) {
+function NavBar ({ background, linkColor, navLinks, logo }) {
     const [ navOpen, setNavOpen ] = useState(0)
-    // const [ hoverIndex, setHoverIndex ] = useState(-1)
     return (
         <div>
             <nav
                 className="responsive-toolbar"
-                style={{ background: background }}>
+                // style={{ background: background }}
+                >
                 <ul
-                    style={{ background: background }}
+                    // style={{ background: background }}
                     className={ navOpen ? 'active' : '' }
                 >
                     <figure className="image-logo" onClick={ () => { setNavOpen(!navOpen) } }>
@@ -19,13 +20,10 @@ function NavBar ({ background, hoverBackground, linkColor, navLinks, logo }) {
                     { navLinks.map((link, index) => 
                         <li
                             key={ index }
-                            // onMouseEnter={ () => { setHoverIndex(index) } }
-                            // onMouseLeave={ () => { setHoverIndex(-1) } }
-                        // style={{ background: hoverIndex === index ? (hoverBackground || '#999') : '' }}
                         >
                             <Link
                                 to={link.path}
-                                style={{ color: linkColor }}
+                                // style={{ color: linkColor }}
                             >    { link.icon } { link.text }
                             </Link>
                         </li>

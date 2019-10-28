@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Prociono|Rajdhani|Slabo+27px&display=swap');
+
+.APODImage {
+    margin: 2% 10%;
+    height: 600px;
+    padding: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+}
+
+.apod {
+    max-height: 100%;
+    width: auto;
+    float: left;
+    padding-right: 30px;
+}
+
+.descriptionDiv {
+    
+}
+
+.description {
+    font-family: 'Prociono', serif;
+    padding: 5px;
+    /* background-color: orange; */
+}
+h2 {
+    padding-top: 20px;
+}

@@ -37,9 +37,8 @@ const Header = () => {
           <NavBar 
             navLinks = { navLinks }
             logo = { logo }
-            background = { "white" }
-            hoverBackground = { "#ddd" }
-            linkColor = { "black"}
+            // background = {  }
+            // linkColor = { "black"}
           />
           <Router>
             <Home path="/"/>
