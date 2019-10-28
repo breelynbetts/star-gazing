@@ -46,7 +46,10 @@ const SearchForm = () => {
           </div>
         )}
       </form>
-      <SearchResults results={images} />
+      <div className='ImageResults'>
+        <SearchResults results={images} />
+      </div>
+    
     </div>
   )
 }

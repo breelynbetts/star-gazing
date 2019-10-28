@@ -5,6 +5,7 @@ class Search extends Component {
     render () {
         return (
             <div className="search-bar">
+                <h3>NASA Search!</h3>
                 <SearchForm />
             </div>
         )

@@ -7,8 +7,8 @@
     background-color: black ;
     
 }
-.image-logo {
-    background-color: #FFE5B4;
+.figure {
+    float: left;
 }
 
 ul {
@@ -17,10 +17,11 @@ ul {
     margin-left: 0%;
     align-items: center;
 }
-/* 
+
 li {
     text-align: right;
     background-color: orange;
-} */
+    text-decoration: none;
+}
 
 

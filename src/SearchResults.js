@@ -7,7 +7,7 @@ import NASAImage from './NASAImage'
 class SearchResults extends Component {
   render() {
     return (
-      <div className="SearchResults">
+      <div className="search">
         {this.props.results.map(image => <NASAImage key={image.id} image={image} />)}
       </div>
     )

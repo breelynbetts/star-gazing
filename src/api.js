@@ -1,158 +1,112 @@
 const apiHost = () => {} // No-op in our mock version.
 
 const searchNasa = () => Promise.resolve({
-  data: [{
-      "id": 689597,
-      "sol": 2540,
-      "camera": {
-        "id": 20,
-        "name": "FHAZ",
-        "rover_id": 5,
-        "full_name": "Front Hazard Avoidance Camera"
-      },
-      "img_src": "https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/02540/opgs/edr/fcam/FLB_622990123EDR_F0763002FHAZ00341M_.JPG",
-      "earth_date": "2019-09-28",
-      "rover": {
-        "id": 5,
-        "name": "Curiosity",
-        "landing_date": "2012-08-06",
-        "launch_date": "2011-11-26",
-        "status": "active",
-        "max_sol": 2540,
-        "max_date": "2019-09-28",
-        "total_photos": 366206,
-        "cameras": [{
-            "name": "FHAZ",
-            "full_name": "Front Hazard Avoidance Camera"
-          },
-          {
-            "name": "NAVCAM",
-            "full_name": "Navigation Camera"
-          },
-          {
-            "name": "MAST",
-            "full_name": "Mast Camera"
-          },
-          {
-            "name": "CHEMCAM",
-            "full_name": "Chemistry and Camera Complex"
-          },
-          {
-            "name": "MAHLI",
-            "full_name": "Mars Hand Lens Imager"
-          },
-          {
-            "name": "MARDI",
-            "full_name": "Mars Descent Imager"
-          },
-          {
-            "name": "RHAZ",
-            "full_name": "Rear Hazard Avoidance Camera"
-          }
-        ]
-      }
+  data: [
+    {
+      "href": "https://images-assets.nasa.gov/image/PIA20695/collection.json",
+      "links": [{
+        "rel": "preview",
+        "href": "https://images-assets.nasa.gov/image/PIA20695/PIA20695~thumb.jpg",
+        "render": "image"
+      }],
+      "data": [{
+        "title": "Frankenstein Galaxy",
+        "description_508": "NASA's GALEX reveals the true nature of UGC 1382, dubbed the Frankenstein galaxy. Scientists have discovered that UGC 1382 is a giant, and one of the largest isolated galaxies known.",
+        "date_created": "2016-07-11T15:50:52Z",
+        "description": "The galaxy UGC 1382 has been revealed to be far larger and stranger than previously thought. Astronomers relied on a combination of ground-based and space telescopes to uncover the true nature of this \"Frankenstein galaxy.\" The composite image shows the same galaxy as viewed with different instruments. The component images are also available.  In the image at left, UGC 1382 appears to be a simple elliptical galaxy, based on optical data from the Sloan Digital Sky Survey (SDSS). But spiral arms emerged when astronomers incorporated ultraviolet data from the Galaxy Evolution Explorer (GALEX) and deep optical data from SDSS, as seen in the middle image. Combining that with a view of low-density hydrogen gas (shown in green), detected at radio wavelengths by the Very Large Array, scientists discovered that UGC 1382 is a giant, and one of the largest isolated galaxies known.  GALEX in particular was able detect very faint features because it operated from space, which is necessary for UV observations because ultraviolet light is absorbed by the Earth's atmosphere. Astronomers also used Stripe 82 of SDSS, a small region of sky where SDSS imaged the sky 80 times longer than the original standard SDSS survey. This enabled optical detection of much fainter features as well.  http://photojournal.jpl.nasa.gov/catalog/PIA20695",
+        "secondary_creator": "NASA/JPL/Caltech/SDSS/NRAO",
+        "media_type": "image",
+        "keywords": [
+          "Galaxy Evolution Explorer GALEX"
+        ],
+        "nasa_id": "PIA20695",
+        "center": "JPL"
+      }]
     },
     {
-      "id": 689598,
-      "sol": 2540,
-      "camera": {
-        "id": 20,
-        "name": "FHAZ",
-        "rover_id": 5,
-        "full_name": "Front Hazard Avoidance Camera"
-      },
-      "img_src": "https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/02540/opgs/edr/fcam/FRB_622990123EDR_F0763002FHAZ00341M_.JPG",
-      "earth_date": "2019-09-28",
-      "rover": {
-        "id": 5,
-        "name": "Curiosity",
-        "landing_date": "2012-08-06",
-        "launch_date": "2011-11-26",
-        "status": "active",
-        "max_sol": 2540,
-        "max_date": "2019-09-28",
-        "total_photos": 366206,
-        "cameras": [{
-            "name": "FHAZ",
-            "full_name": "Front Hazard Avoidance Camera"
-          },
-          {
-            "name": "NAVCAM",
-            "full_name": "Navigation Camera"
-          },
-          {
-            "name": "MAST",
-            "full_name": "Mast Camera"
-          },
-          {
-            "name": "CHEMCAM",
-            "full_name": "Chemistry and Camera Complex"
-          },
-          {
-            "name": "MAHLI",
-            "full_name": "Mars Hand Lens Imager"
-          },
-          {
-            "name": "MARDI",
-            "full_name": "Mars Descent Imager"
-          },
-          {
-            "name": "RHAZ",
-            "full_name": "Rear Hazard Avoidance Camera"
-          }
-        ]
-      }
+      "href": "https://images-assets.nasa.gov/image/astronomers-set-a-new-galaxy-distance-record_17389972462_o/collection.json",
+      "links": [{
+        "rel": "preview",
+        "href": "https://images-assets.nasa.gov/image/astronomers-set-a-new-galaxy-distance-record_17389972462_o/astronomers-set-a-new-galaxy-distance-record_17389972462_o~thumb.jpg",
+        "render": "image"
+      }],
+      "data": [{
+        "title": "Astronomers Set a New Galaxy Distance Record",
+        "description": "This is a Hubble Space Telescope image of the farthest spectroscopically confirmed galaxy observed to date (inset). It was identified in this Hubble image of a field of galaxies in the CANDELS survey (Cosmic Assembly Near-infrared Deep Extragalactic Legacy Survey). NASA’s Spitzer Space Telescope also observed the unique galaxy. The W. M. Keck Observatory was used to obtain a spectroscopic redshift (z=7.7), extending the previous redshift record. Measurements of the stretching of light, or redshift, give the most reliable distances to other galaxies. This source is thus currently the most distant confirmed galaxy known, and it appears to also be one of the brightest and most massive sources at that time. The galaxy existed over 13 billion years ago. The near-infrared light image of the galaxy (inset) has been colored blue as suggestive of its young, and hence very blue, stars. The CANDELS field is a combination of visible-light and near-infrared exposures.  Credits: NASA, ESA, P. Oesch (Yale U.)",
+        "nasa_id": "astronomers-set-a-new-galaxy-distance-record_17389972462_o",
+        "media_type": "image",
+        "keywords": [
+          "Hubble",
+          "HST",
+          "Hubble Space Telescope",
+          "galaxy"
+        ],
+        "date_created": "2015-05-06T00:00:00Z",
+        "center": "GSFC"
+      }]
     },
     {
-      "id": 689599,
-      "sol": 2540,
-      "camera": {
-        "id": 21,
-        "name": "RHAZ",
-        "rover_id": 5,
-        "full_name": "Rear Hazard Avoidance Camera"
-      },
-      "img_src": "https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/02540/opgs/edr/rcam/RLB_622990164EDR_F0763002RHAZ00341M_.JPG",
-      "earth_date": "2019-09-28",
-      "rover": {
-        "id": 5,
-        "name": "Curiosity",
-        "landing_date": "2012-08-06",
-        "launch_date": "2011-11-26",
-        "status": "active",
-        "max_sol": 2540,
-        "max_date": "2019-09-28",
-        "total_photos": 366206,
-        "cameras": [{
-            "name": "FHAZ",
-            "full_name": "Front Hazard Avoidance Camera"
-          },
-          {
-            "name": "NAVCAM",
-            "full_name": "Navigation Camera"
-          },
-          {
-            "name": "MAST",
-            "full_name": "Mast Camera"
-          },
-          {
-            "name": "CHEMCAM",
-            "full_name": "Chemistry and Camera Complex"
-          },
-          {
-            "name": "MAHLI",
-            "full_name": "Mars Hand Lens Imager"
-          },
-          {
-            "name": "MARDI",
-            "full_name": "Mars Descent Imager"
-          },
-          {
-            "name": "RHAZ",
-            "full_name": "Rear Hazard Avoidance Camera"
-          }
-        ]
-      }
+      "href": "https://images-assets.nasa.gov/image/PIA14090/collection.json",
+      "links": [{
+        "rel": "preview",
+        "href": "https://images-assets.nasa.gov/image/PIA14090/PIA14090~thumb.jpg",
+        "render": "image"
+      }],
+      "data": [{
+        "title": "Little Galaxies Pack a Big Punch",
+        "description_508": "These postage-stamp images taken by NASA Galaxy Evolution Explorer are helping to solve a mystery -- why do the littlest of galaxies produce the biggest of star explosions, or supernovae?",
+        "date_created": "2011-04-21T17:00:27Z",
+        "description": "These postage-stamp images taken by NASA Galaxy Evolution Explorer are helping to solve a mystery -- why do the littlest of galaxies produce the biggest of star explosions, or supernovae?",
+        "secondary_creator": "NASA/JPL-Caltech",
+        "media_type": "image",
+        "keywords": [
+          "Galaxy Evolution Explorer GALEX"
+        ],
+        "nasa_id": "PIA14090",
+        "center": "JPL"
+      }]
+    },
+    {
+      "href": "https://images-assets.nasa.gov/image/PIA17246/collection.json",
+      "links": [{
+        "rel": "preview",
+        "href": "https://images-assets.nasa.gov/image/PIA17246/PIA17246~thumb.jpg",
+        "render": "image"
+      }],
+      "data": [{
+        "title": "Galaxy Pencil-Thin Profile",
+        "description_508": "This image from NASA Galaxy Evolution Explorer shows NGC 4565, one of the nearest and brightest galaxies not included in the famous list by 18th-century comet hunter Charles Messier.",
+        "date_created": "2013-06-28T20:00:02Z",
+        "description": "This image from NASA Galaxy Evolution Explorer shows NGC 4565, one of the nearest and brightest galaxies not included in the famous list by 18th-century comet hunter Charles Messier.",
+        "secondary_creator": "NASA/JPL-Caltech",
+        "media_type": "image",
+        "keywords": [
+          "Galaxy Evolution Explorer GALEX"
+        ],
+        "nasa_id": "PIA17246",
+        "center": "JPL"
+      }]
+    },
+    {
+      "href": "https://images-assets.nasa.gov/image/PIA17554/collection.json",
+      "links": [{
+        "rel": "preview",
+        "href": "https://images-assets.nasa.gov/image/PIA17554/PIA17554~thumb.jpg",
+        "render": "image"
+      }],
+      "data": [{
+        "title": "Galaxies Grow from Inside Out",
+        "description_508": "Evidence from NASA Wide-field Infrared Survey Explorer and Galaxy Evolution Explorer missions provide support for the inside-out theory of galaxy evolution, which holds that star formation starts at the core of the galaxy and spreads outward.",
+        "date_created": "2013-10-31T20:39:15Z",
+        "description": "Evidence from NASA Wide-field Infrared Survey Explorer and Galaxy Evolution Explorer missions provide support for the inside-out theory of galaxy evolution, which holds that star formation starts at the core of the galaxy and spreads outward.",
+        "secondary_creator": "NASA/JPL-Caltech",
+        "media_type": "image",
+        "keywords": [
+          "Galaxy Evolution Explorer GALEX,Wide-field Infrared Survey Exp"
+        ],
+        "nasa_id": "PIA17554",
+        "center": "JPL"
+      }]
     }
   ]
 })
