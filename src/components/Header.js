@@ -5,7 +5,6 @@ import PicOfDay from '../pages/PicOfDay.js';
 import Events from '../pages/Events.js';
 import Search from '../pages/Search.js';
 import Home from '../pages/Home.js';
-import logo from '../media/logo.jpg';
 import * as Icon from 'react-feather';
 
 const Header = () => {
@@ -36,9 +35,6 @@ const Header = () => {
         <div className="App">
           <NavBar 
             navLinks = { navLinks }
-            logo = { logo }
-            // background = {  }
-            // linkColor = { 'none'}
           />
           <Router>
             <Home path="/"/>

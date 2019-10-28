@@ -1,27 +1,49 @@
-.nav {
-    max-width: 1010px;
-    width: 100%;
+@import url('https://fonts.googleapis.com/css?family=Staatliches&display=swap');
+
+.navigationDiv {
     display: flex;
+    justify-content: flex-end;
     align-items: center;
-    margin-top: 0%;
-    background-color: black ;
-    
-}
-.figure {
-    float: left;
+    padding: 30px 10%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
+    height: 30px;
+    position: sticky;
 }
 
-ul {
+.image-logo {
+    margin-right: auto;
+}
+
+.image {
+    cursor: pointer;
+    border-right: 1px solid black;
+    padding-right: 5px;
+    margin-right: 10px;
+}
+
+.title {
+    display: inline;
+    font-family: 'Staatliches', cursive;
+    font-size: 40px;
+}
+
+.links {
     list-style: none;
-    display: flex;
-    margin-left: 0%;
-    align-items: center;
 }
 
-li {
-    text-align: right;
-    background-color: orange;
-    text-decoration: none;
+.links li {
+    display: inline-block;
+    padding: 0 10px;
+    font-family: 'Staatliches', cursive;
+    font-size: 25px;
+    border-right: 1px solid black;
 }
 
+.links li:last-child {
+    border-right: none;
+}
 
+.links li:hover {
+    background-color: #b4c1ff;
+    padding: 10px;
+}
