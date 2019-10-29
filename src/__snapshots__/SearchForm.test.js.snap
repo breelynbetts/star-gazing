@@ -1,61 +1,67 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should start with a disabled search button 1`] = `
-<form
-  className="SearchForm"
-  onSubmit={[Function]}
->
-  <p>
-    Enter a search term:
-  </p>
-  <input
-    name="query"
-    onChange={[Function]}
-    type="text"
-    value=""
-  />
-  <div
-    className="ButtonBar"
+<div>
+  <form
+    className="SearchForm"
+    onSubmit={[Function]}
   >
-    <button
-      disabled={true}
-      type="submit"
+    <input
+      name="query"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <div
+      className="ButtonBar"
     >
-      Search Giphy!
-    </button>
-  </div>
+      <button
+        disabled={true}
+        type="submit"
+      >
+        Search!
+      </button>
+    </div>
+  </form>
   <div
-    className="SearchResults"
-  />
-</form>
+    className="ImageResults"
+  >
+    <div
+      className="search"
+    />
+  </div>
+</div>
 `;
 
 exports[`should start with an empty search field 1`] = `
-<form
-  className="SearchForm"
-  onSubmit={[Function]}
->
-  <p>
-    Enter a search term:
-  </p>
-  <input
-    name="query"
-    onChange={[Function]}
-    type="text"
-    value=""
-  />
-  <div
-    className="ButtonBar"
+<div>
+  <form
+    className="SearchForm"
+    onSubmit={[Function]}
   >
-    <button
-      disabled={true}
-      type="submit"
+    <input
+      name="query"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <div
+      className="ButtonBar"
     >
-      Search Giphy!
-    </button>
-  </div>
+      <button
+        disabled={true}
+        type="submit"
+      >
+        Search!
+      </button>
+    </div>
+  </form>
   <div
-    className="SearchResults"
-  />
-</form>
+    className="ImageResults"
+  >
+    <div
+      className="search"
+    />
+  </div>
+</div>
 `;

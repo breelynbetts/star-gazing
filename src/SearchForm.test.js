@@ -97,11 +97,11 @@ const setupAndQuerySearchForm = async () => {
 describe('API calls', () => {
   let div
   beforeEach(async () => {
-    sinon.stub(api, 'searchGifs')
+    sinon.stub(api, 'searchNasa')
 
     // To manage size, we supply a mock response that contains _only_ what the app will need. This does mean
     // that we need to revise the mock response if our app starts using more (or different) data.
-    api.searchGifs.returns(Promise.resolve({
+    api.searchNasa.returns(Promise.resolve({
       data: [
         {
           id: 'FiGiRei2ICzzG',
@@ -120,21 +120,20 @@ describe('API calls', () => {
 
   afterEach(() => {
     ReactDOM.unmountComponentAtNode(div)
-    api.searchGifs.restore()
+    api.searchNasa.restore()
   })
 
-  it('should trigger a Giphy search when the search button is clicked', () => {
+  it('should trigger a NASA search when the search button is clicked', () => {
     // Note how this _isn’t_ a snapshot test because we’re checking whether a function was called with
     // the right arguments.
-    expect(api.searchGifs.firstCall.args[0]).toEqual({
-      rating: 'pg-13',
+    expect(api.searchNasa.firstCall.args[0]).toEqual({
       q: 'hello' // Our test search term.
     })
   })
 
   it('should populate the image container when search results arrive', () => {
     // Our mock search results yield one image, so we expect our results container to have one child.
-    const searchResults = div.querySelector('div.SearchResults')
+    const searchResults = div.querySelector('div.ImageResults')
     expect(searchResults.children.length).toEqual(1)
   })
 })
@@ -142,15 +141,15 @@ describe('API calls', () => {
 describe('failed API calls', () => {
   let div
   beforeEach(async () => {
-    sinon.stub(api, 'searchGifs')
-    api.searchGifs.returns(Promise.reject('Mock failure'))
+    sinon.stub(api, 'searchNasa')
+    api.searchNasa.returns(Promise.reject('Mock failure'))
 
     div = await setupAndQuerySearchForm()
   })
 
   afterEach(() => {
     ReactDOM.unmountComponentAtNode(div)
-    api.searchGifs.restore()
+    api.searchNasa.restore()
   })
 
   it('should display an alert when the API call fails', () => {

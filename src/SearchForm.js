@@ -42,7 +42,6 @@ const SearchForm = () => {
         {error && (
           <div className="error">
             {error}
-            <p>Error has occurred!</p>
           </div>
         )}
       </form>
