@@ -8,8 +8,13 @@ function NavBar ({navLinks}) {
     return (
         <header className='navigationDiv'>
             <figure className="image-logo" onClick={ () => { './' } }>
-                <img className='image' src={ logo } height="40px" width="40px" alt="toolbar-logo" />
-                <h1 className='title'>Star Gazing!</h1>
+                <Link 
+                    to='/'
+                    style={{ textDecoration: 'none' , color: 'black' }}
+                >
+                    <img className='image' src={ logo } height="40px" width="40px" alt="toolbar-logo" />
+                    <h1 className='title'>Star Gazing!</h1>
+                </Link>
             </figure>
             <nav
                 className="responsive-toolbar"
