@@ -13,34 +13,31 @@ function CategorySelection() {
     {data.events === undefined ? console.log("loading"):
         console.log(data.events.geometries)
     }
-    
+
     return (
         <div>
            <span>
            {data.events === undefined ? <div>Loading ...</div> : 
             <div>
-                {/* console.log({JSON.stringify(data.events)}); */}
                 {data.events.map((event) => {
                     return (
                         <div>
                             <h4 key={event.id}>{event.title}</h4 >
                             {event.geometries === undefined ? <div>Loading ...</div> : 
                                 <div>
-                                    {/* console.log({JSON.stringify(data.events)}); */}
-                                    {event.geometries.map((loc) => {
-                                        return (
-                                            <div>
-                                                <p>{loc.date}</p>
-                                                <p>location: 
-                                                    {loc.coordinates[0]}, 
-                                                    {loc.coordinates[1]}
-                                                </p>
-                                                
-                                            </div>
-                                        )
-                                    })}
+                                {event.geometries.map((loc) => {
+                                    return (
+                                        <div>
+                                            <p>{loc.date}</p>
+                                            <p>location: 
+                                                {loc.coordinates[0]}, 
+                                                {loc.coordinates[1]}
+                                            </p>                            
+                                        </div>
+                                    )
+                                })}
                                 </div>
-                                }  
+                            }  
                         </div>
                     )
                 })}

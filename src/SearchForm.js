@@ -36,7 +36,7 @@ const SearchForm = () => {
         <input name="query" type="text" value={query} onChange={handleQueryChange} />
 
         <div className="ButtonBar">
-          <button type="submit" disabled={!query}>Search</button>
+          <button type="submit" disabled={!query}>Search!</button>
         </div>
 
         {error && (

@@ -1,11 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Gothic+A1&display=swap');
+
 .SearchForm > .ButtonBar {
   display: inline;
 }
 
-button:disabled {
-  background-color: white;
-  color: white;
-  
+.SearchForm {
+  height: 25px;
+  align-items: center;
 }
 
+.SearchForm input {
+  width: 30%;
+  height: 23px;
+}
+
+.ButtonBar button:disabled {
+  background-color: grey;  
+}
+
+.ButtonBar button {
+  background-color: #16B1B5;
+  height: 29px; 
+  width: 100px;
+  margin-left: 10px;
+  font-family: 'Gothic A1', sans-serif;
+  letter-spacing: 1px;
+  font-size: 15px;
+}
 
