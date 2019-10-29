@@ -1,13 +1,33 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Staatliches&display=swap');
 
+
+.titleDiv {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 4%;
+}
+
+.homeLogo {
+    height: 100px;
+    width: 100px;
+}
+
 .homeTitle {
     font-family: 'Staatliches', cursive;
     margin-top: 2%;
+    padding-top: 4%;
     font-size: 75px;
     letter-spacing: 3px;
-    border-bottom: 1px solid black;
     width: 50%;
-    margin-left: 25%;
+}
+.info {
+    width: 60%;
+    margin-left: 20%;
+    border-top: 1px double black;
+    padding: 20px;
 }
 .aboutApp {
     font-family: 'Montserrat', sans-serif;

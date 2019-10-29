@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Prociono|Rajdhani|Slabo+27px&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Staatliches&display=swap');
 
 .APODImage {
     margin: 2% 10%;
@@ -17,14 +17,19 @@
 }
 
 .descriptionDiv {
-    
+    height: 100%;
+    align-items: center;
+    padding-left: 40%;
+    padding-right: 5%;
+}
+
+h2 {
+    font-family: 'Staatliches', cursive;
+    font-size: 50px;
 }
 
 .description {
-    font-family: 'Prociono', serif;
+    font-family: 'Montserrat', sans-serif;
     padding: 5px;
-    /* background-color: orange; */
 }
-h2 {
-    padding-top: 20px;
-}
+
