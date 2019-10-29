@@ -1,3 +1,27 @@
 .DatePicker > .ButtonDiv {
     display: inline;
 }
+
+.DatePicker {
+    height: 25px;
+    align-items: center;
+}
+  
+.DatePicker input {
+    width: 20%;
+    height: 23px;
+    font-family: 'Montserrat', sans-serif;
+}
+  
+.ButtonDiv button:disabled {
+    background-color: grey;  
+}
+  
+.ButtonDiv button {  
+    background-color: #16B1B5;
+    height: 26px;
+    margin-left: 3px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    width: 100px;
+}

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
+import './style/CategorySelection.css'
+
 function CategorySelection() {
     const [data, setData] = useState([])
     const url = 'https://eonet.sci.gsfc.nasa.gov/api/v2.1/events?limit=5';
@@ -21,8 +23,8 @@ function CategorySelection() {
             <div>
                 {data.events.map((event) => {
                     return (
-                        <div>
-                            <h4 key={event.id}>{event.title}</h4 >
+                        <div className='eventDiv'>
+                            <h4 className='eventName'key={event.id}>{event.title}</h4 >
                             {event.geometries === undefined ? <div>Loading ...</div> : 
                                 <div>
                                 {event.geometries.map((loc) => {

@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Staatliches&display=swap');
+
+
+.eventsTitle {
+    font-family: 'Staatliches', cursive;
+    font-size: 60px;
+    letter-spacing: 3px;  
+}
