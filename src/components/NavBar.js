@@ -12,7 +12,7 @@ function NavBar ({navLinks}) {
                     to='/'
                     style={{ textDecoration: 'none' , color: 'black' }}
                 >
-                    <img className='image' src={ logo } height="40px" width="40px" alt="toolbar-logo" />
+                    <img className='image' src={ logo } height="40px" width="40px" alt="toolbar-logo" /> 
                     <h1 className='title'>Star Gazing!</h1>
                 </Link>
             </figure>

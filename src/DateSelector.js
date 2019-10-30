@@ -41,6 +41,7 @@ function DateSelector() {
             </div>
           )}
         </form>
+        <p>Date Selected: {query}</p>
         <DateResult results={date}/>
     </div>
   )

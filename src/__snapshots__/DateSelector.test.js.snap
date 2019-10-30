@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should start with a disabled selection button 1`] = `
+<div>
+  <form
+    className="DatePicker"
+    onSubmit={[Function]}
+  >
+    <input
+      name="query"
+      onChange={[Function]}
+      type="date"
+      value=""
+    />
+    <div
+      className="ButtonDiv"
+    >
+      <button
+        disabled={true}
+        type="submit"
+      >
+        Select Date
+      </button>
+    </div>
+  </form>
+  <p>
+    Date Selected: 
+    
+  </p>
+  <div
+    className="DateResult"
+  />
+</div>
+`;
+
+exports[`should start with no date selected 1`] = `
+<div>
+  <form
+    className="DatePicker"
+    onSubmit={[Function]}
+  >
+    <input
+      name="query"
+      onChange={[Function]}
+      type="date"
+      value=""
+    />
+    <div
+      className="ButtonDiv"
+    >
+      <button
+        disabled={true}
+        type="submit"
+      >
+        Select Date
+      </button>
+    </div>
+  </form>
+  <p>
+    Date Selected: 
+    
+  </p>
+  <div
+    className="DateResult"
+  />
+</div>
+`;

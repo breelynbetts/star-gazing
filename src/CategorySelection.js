@@ -1,20 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
+import { searchEvents } from './api.js'
+
 import './style/CategorySelection.css'
 
 function CategorySelection() {
     const [data, setData] = useState([])
     const url = 'https://eonet.sci.gsfc.nasa.gov/api/v2.1/events?limit=5';
-
     
     useEffect(() => {
         axios.get(url).then(json => setData(json.data));
       }, []);
     
-    {data.events === undefined ? console.log("loading"):
-        console.log(data.events.geometries)
-    }
+    // {data.events === undefined ? console.log("loading"):
+    //     console.log(data.events.geometries)
+    // }
 
     return (
         <div>
@@ -31,9 +32,9 @@ function CategorySelection() {
                                     return (
                                         <div>
                                             <p>{loc.date}</p>
-                                            <p>location: 
-                                                {loc.coordinates[0]}, 
-                                                {loc.coordinates[1]}
+                                            <p>location: <br/>
+                                                {loc.coordinates[0]}, <br/>
+                                                { loc.coordinates[1] }
                                             </p>                            
                                         </div>
                                     )

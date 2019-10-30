@@ -21,7 +21,7 @@ it('should start with a disabled selection button', () => {
     expect(tree).toMatchSnapshot()
 })
 
-describe('date selection', () => {
+describe('date button', () => {
     let div
     beforeEach(() => {
         div = document.createElement('div')
@@ -29,6 +29,20 @@ describe('date selection', () => {
             ReactDOM.render(<DateSelector />, div)
         })
     })
+
+    afterEach(() => ReactDOM.unmountComponentAtNode(div))
+
+    it('should be enabled when the date field is fully filled out', () => {
+        const dateInput = div.querySelector('input')
+        ReactTestUtils.act(() => {
+            dateInput.value = '1999-09-25'
+            ReactTestUtils.Simulate.change(dateInput)
+        })
+
+        const dateButton = div.querySelector('button')
+        expect(dateButton.disabled).toBe(false)
+    })
 })
   
-afterEach(() => ReactDOM.unmountComponentAtNode(div))
+
+
