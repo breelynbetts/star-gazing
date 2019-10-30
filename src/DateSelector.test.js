@@ -42,6 +42,17 @@ describe('date button', () => {
         const dateButton = div.querySelector('button')
         expect(dateButton.disabled).toBe(false)
     })
+
+    it('should be disabled when a valid date is not entered', () => {
+        const dateInput = div.querySelector('input')
+        ReactTestUtils.act(() => {
+            dateInput.value = 'this should break!'
+            ReactTestUtils.Simulate.change(dateInput)
+        })
+
+        const dateButton = div.querySelector('button')
+        expect(dateButton.disabled).toBe(true)
+    })
 })
   
 
