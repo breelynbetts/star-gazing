@@ -1,0 +1,62 @@
+import { functions, isEqual, omit } from 'lodash'
+import React, { useEffect, useRef } from 'react'
+
+function Map({ options, onMount, className }) {
+  const divProps = { ref: useRef(), className }
+
+  useEffect(() => {
+    const onLoad = () => {
+      const map = new window.google.maps.Map(divProps.ref.current, options)
+      onMount && onMount(map)
+    }
+    if (!window.google) {
+      const script = document.createElement(`script`)
+      script.type = `text/javascript`
+      script.src =
+      'https://maps.googleapis.com/maps/api/js?key=AIzaSyBl2QXtP5s4QaJyXVULGyJMZLdR3jDmhIw'
+      const headScript = document.getElementsByTagName(`script`)[0]
+      headScript.parentNode.insertBefore(script, headScript)
+      script.addEventListener(`load`, onLoad)
+      return () => script.removeEventListener(`load`, onLoad)
+    } else onLoad()
+  }, [divProps.ref, onMount, options])
+
+  return (
+    <div
+      style={{width: '45%', height: '400px', marginLeft: '27.5%'}}
+      {...divProps}
+    />
+  )
+}
+
+const shouldUpdate = (prevProps, nextProps) => {
+  delete prevProps.options.mapTypeId
+  const [prevFuncs, nextFuncs] = [functions(prevProps), functions(nextProps)]
+  return (
+    isEqual(omit(prevProps, prevFuncs), omit(nextProps, nextFuncs)) &&
+    prevFuncs.every(fn => prevProps[fn].toString() === nextProps[fn].toString())
+  )
+}
+
+// const addMarkers = (locations) => map =>  {
+//   locations.forEach((loc, index) => {
+//     const marker = new window.google.maps.Marker ({
+//       map, 
+//       position: loc.location,
+//       label: `${index + 1}`,
+//       title: loc.title,
+//     })
+//     marker.addListener(`click`, () => {
+//       window.location.href = loc.url
+//     })
+//   })
+// }
+
+export default React.memo(Map, shouldUpdate)
+
+Map.defaultProps = {
+  options: {
+    center: { lat: 48, lng: 8 },
+    zoom: 1.5,
+  },
+}

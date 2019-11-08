@@ -1,28 +1,31 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios'
-
 import { searchEvents } from './api.js'
 
 import './style/CategorySelection.css'
 
 function CategorySelection() {
     const [data, setData] = useState([])
-    const url = 'https://eonet.sci.gsfc.nasa.gov/api/v2.1/events?limit=5';
+    const [error, setError] = useState(null)
     
     useEffect(() => {
-        axios.get(url).then(json => setData(json.data));
+        const fetchData = async () => {
+            try {
+                const result = await searchEvents({});
+                setData(result.data)
+            } catch (e) {
+                setError('Sorry, but something went wrong')
+            }
+        }
+        fetchData();
+        
       }, []);
-    
-    // {data.events === undefined ? console.log("loading"):
-    //     console.log(data.events.geometries)
-    // }
 
     return (
         <div>
-           <span>
-           {data.events === undefined ? <div>Loading ...</div> : 
+           <span >
+           {data[0] === undefined ? <div>Loading ...</div> : 
             <div>
-                {data.events.map((event) => {
+                {data[0].events.map((event) => {
                     return (
                         <div className='eventDiv'>
                             <h4 className='eventName'key={event.id}>{event.title}</h4 >
@@ -33,8 +36,7 @@ function CategorySelection() {
                                         <div>
                                             <p>{loc.date}</p>
                                             <p>location: <br/>
-                                                {loc.coordinates[0]}, <br/>
-                                                { loc.coordinates[1] }
+                                               lat:  {loc.coordinates[0]} lng:  { loc.coordinates[1] }
                                             </p>                            
                                         </div>
                                     )
@@ -45,9 +47,9 @@ function CategorySelection() {
                     )
                 })}
             </div>
-            }  
+            }
        </span>
-        </div>
+    </div>
     )
 }
 

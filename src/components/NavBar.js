@@ -16,6 +16,7 @@ function NavBar ({navLinks}) {
                     <h1 className='title'>Star Gazing!</h1>
                 </Link>
             </figure>
+            <div className='navDiv'>
             <nav
                 className="responsive-toolbar"
                 >
@@ -37,6 +38,7 @@ function NavBar ({navLinks}) {
                         )}
                 </ul>
             </nav>
+            </div>
         </header>
     )
 }

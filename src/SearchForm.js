@@ -24,6 +24,7 @@ const SearchForm = () => {
       })
 
       setImages(result.data)
+      console.log(images)
     } catch (error) {
       setError('Sorry, but something went wrong.')
     }
