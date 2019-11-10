@@ -13,7 +13,7 @@ function CategorySelection() {
                 const result = await searchEvents({});
                 setData(result.data)
             } catch (e) {
-                setError('Sorry, but something went wrong')
+                setError('Sorry, but something went wrong.')
             }
         }
         fetchData();
@@ -48,6 +48,11 @@ function CategorySelection() {
                 })}
             </div>
             }
+            {error && (
+          <div className="error">
+            {error}
+          </div>
+        )}
        </span>
     </div>
     )
