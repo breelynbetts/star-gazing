@@ -16,7 +16,6 @@ it('should start with events on the page', () => {
 })
 
 const setupAndLoadPage = async () => {
-    const { act } = TestRenderer
     const div = document.createElement('div')
     await ReactTestUtils.act(async () => {
       ReactDOM.render(<CategorySelection />, div)
