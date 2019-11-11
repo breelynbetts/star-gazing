@@ -9,15 +9,16 @@ import * as api from './api'
 import CategorySelection from './CategorySelection'
 
 
-it('should start with an empty search field', () => {
+it('should start with events on the page', () => {
   const component = TestRenderer.create(<CategorySelection />)
   const tree = component.toJSON()
   expect(tree).toMatchSnapshot()
 })
 
 const setupAndLoadPage = async () => {
+    const { act } = TestRenderer
     const div = document.createElement('div')
-    ReactTestUtils.act(() => {
+    await ReactTestUtils.act(async () => {
       ReactDOM.render(<CategorySelection />, div)
     })
   
@@ -43,17 +44,38 @@ describe('API calls', () => {
       // To manage size, we supply a mock response that contains _only_ what the app will need. This does mean
       // that we need to revise the mock response if our app starts using more (or different) data.
       api.searchEvents.returns(Promise.resolve({
-        data: [
-          {
-            id: 'FiGiRei2ICzzG',
-            source_tld: 'tumblr.com',
-            images: {
-              fixed_width: {
-                url: 'http://media2.giphy.com/media/FiGiRei2ICzzG/200w.gif'
-              }
-            }
-          }
-        ]
+        data: [{
+          "title": "EONET Events",
+          "description": "Natural events from EONET.",
+          "link": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/events",
+          "events": [
+            {
+              "id": "EONET_4475",
+              "title": "Wildfires - Los Angeles County (Tick Fire), California, United States",
+              "description": "",
+              "link": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/events/EONET_4475",
+              "categories": [
+                {
+                  "id": 8,
+                  "title": "Wildfires"
+                }
+              ],
+              "sources": [{
+                "id": "PDC",
+                "url": "http://emops.pdc.og/emops/?hazard_id=96981"
+              }],
+              "geometries": [
+                {
+                  "date": "2019-10-24T18:16:00Z",
+                  "type": "Point",
+                  "coordinates": [
+                    -118.39468413,
+                    34.457634347
+                  ]
+                }
+              ]
+            }]
+          }]
       }))
   
       div = await setupAndLoadPage()
@@ -62,6 +84,12 @@ describe('API calls', () => {
     afterEach(() => {
       ReactDOM.unmountComponentAtNode(div)
       api.searchEvents.restore()
+    })
+
+    it('should populate the event container when results arrive', () => {
+      // Our mock search results yield one image, so we expect our results container to have one child.
+      const searchResults = div.querySelector('div.eventDiv')
+      expect(searchResults.children.length).toEqual(2)
     })
   
   })

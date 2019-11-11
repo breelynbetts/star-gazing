@@ -28,21 +28,17 @@ function CategorySelection() {
                 {data[0].events.map((event) => {
                     return (
                         <div key={event.id} className='eventDiv'>
-                            <h4 className='eventName'key={event.id}>{event.title}</h4 >
-                            {event.geometries === undefined ? <div>Loading ...</div> : 
-                                <div>
-                                {event.geometries.map((loc) => {
-                                    return (
-                                        <div key={loc.date}>
-                                            <p>{loc.date}</p>
-                                            <p>location: <br/>
-                                               lat:  {loc.coordinates[0]} lng:  { loc.coordinates[1] }
-                                            </p>                            
-                                        </div>
-                                    )
-                                })}
-                                </div>
-                            }  
+                            <h4 className='eventName'key={event.id}>{event.title}</h4 >   
+                            {event.geometries.map((loc) => {
+                                return (
+                                    <div key={loc.date}>
+                                        <p>{loc.date}</p>
+                                        <p>location: <br/>
+                                           lat:  {loc.coordinates[0]} lng:  { loc.coordinates[1] }
+                                        </p>                            
+                                    </div>
+                                )
+                            })}
                         </div>
                     )
                 })}
