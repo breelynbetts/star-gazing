@@ -19,14 +19,10 @@ exports[`should start with a disabled selection button 1`] = `
         disabled={true}
         type="submit"
       >
-        Select Date
+        select date
       </button>
     </div>
   </form>
-  <p>
-    Date Selected: 
-    
-  </p>
   <div
     className="DateResult"
   >
@@ -56,14 +52,10 @@ exports[`should start with no date selected 1`] = `
         disabled={true}
         type="submit"
       >
-        Select Date
+        select date
       </button>
     </div>
   </form>
-  <p>
-    Date Selected: 
-    
-  </p>
   <div
     className="DateResult"
   >

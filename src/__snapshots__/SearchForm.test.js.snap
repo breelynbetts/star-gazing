@@ -19,7 +19,7 @@ exports[`should start with a disabled search button 1`] = `
         disabled={true}
         type="submit"
       >
-        Search!
+        search
       </button>
     </div>
   </form>
@@ -52,7 +52,7 @@ exports[`should start with an empty search field 1`] = `
         disabled={true}
         type="submit"
       >
-        Search!
+        search
       </button>
     </div>
   </form>

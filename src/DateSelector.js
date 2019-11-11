@@ -32,7 +32,7 @@ function DateSelector() {
         <form className="DatePicker" onSubmit={handleInput}>
           <input name="query" type="date" value={query} onChange={handleQueryChange}/>
           <div className="ButtonDiv">
-            <button type="submit" disabled={!query}>Select Date</button>
+            <button type="submit" disabled={!query}>select date</button>
           </div>
           {error && (
             <div className="error">
@@ -40,7 +40,6 @@ function DateSelector() {
             </div>
           )}
         </form>
-        <p>Date Selected: {query}</p>
         <div className='DateResult'>
           <DateResult results={date}/>
         </div>

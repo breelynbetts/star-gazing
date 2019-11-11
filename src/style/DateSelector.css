@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Oswald&display=swap');
+
 .DatePicker > .ButtonDiv {
     display: inline;
 }
@@ -9,8 +11,9 @@
   
 .DatePicker input {
     width: 20%;
-    height: 23px;
-    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 1.75px;
 }
   
 .ButtonDiv button:disabled {
@@ -18,10 +21,10 @@
 }
   
 .ButtonDiv button {  
-    background-color: #16B1B5;
-    height: 26px;
-    margin-left: 3px;
-    font-family: 'Montserrat', sans-serif;
+    background-color: #b4c1ff;    
+    height: 100%;
+    font-family: 'Staatliches', cursive;
     font-size: 14px;
+    letter-spacing: 1.5px;
     width: 100px;
 }
