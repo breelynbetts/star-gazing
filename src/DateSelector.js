@@ -37,12 +37,13 @@ function DateSelector() {
           {error && (
             <div className="error">
               {error}
-              <p>Error has occurred!</p>
             </div>
           )}
         </form>
         <p>Date Selected: {query}</p>
-        <DateResult results={date}/>
+        <div className='DateResult'>
+          <DateResult results={date}/>
+        </div>
     </div>
   )
 }

@@ -104,13 +104,25 @@ describe('API calls', () => {
     api.searchNasa.returns(Promise.resolve({
       data: [
         {
-          id: 'FiGiRei2ICzzG',
-          source_tld: 'tumblr.com',
-          images: {
-            fixed_width: {
-              url: 'http://media2.giphy.com/media/FiGiRei2ICzzG/200w.gif'
-            }
-          }
+          "href": "https://images-assets.nasa.gov/image/PIA20695/collection.json",
+          "links": [{
+            "rel": "preview",
+            "href": "https://images-assets.nasa.gov/image/PIA20695/PIA20695~thumb.jpg",
+            "render": "image"
+          }],
+          "data": [{
+            "title": "Frankenstein Galaxy",
+            "description_508": "NASA's GALEX reveals the true nature of UGC 1382, dubbed the Frankenstein galaxy. Scientists have discovered that UGC 1382 is a giant, and one of the largest isolated galaxies known.",
+            "date_created": "2016-07-11T15:50:52Z",
+            "description": "The galaxy UGC 1382 has been revealed to be far larger and stranger than previously thought. Astronomers relied on a combination of ground-based and space telescopes to uncover the true nature of this \"Frankenstein galaxy.\" The composite image shows the same galaxy as viewed with different instruments. The component images are also available.  In the image at left, UGC 1382 appears to be a simple elliptical galaxy, based on optical data from the Sloan Digital Sky Survey (SDSS). But spiral arms emerged when astronomers incorporated ultraviolet data from the Galaxy Evolution Explorer (GALEX) and deep optical data from SDSS, as seen in the middle image. Combining that with a view of low-density hydrogen gas (shown in green), detected at radio wavelengths by the Very Large Array, scientists discovered that UGC 1382 is a giant, and one of the largest isolated galaxies known.  GALEX in particular was able detect very faint features because it operated from space, which is necessary for UV observations because ultraviolet light is absorbed by the Earth's atmosphere. Astronomers also used Stripe 82 of SDSS, a small region of sky where SDSS imaged the sky 80 times longer than the original standard SDSS survey. This enabled optical detection of much fainter features as well.  http://photojournal.jpl.nasa.gov/catalog/PIA20695",
+            "secondary_creator": "NASA/JPL/Caltech/SDSS/NRAO",
+            "media_type": "image",
+            "keywords": [
+              "Galaxy Evolution Explorer GALEX"
+            ],
+            "nasa_id": "PIA20695",
+            "center": "JPL"
+          }]
         }
       ]
     }))

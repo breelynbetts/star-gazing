@@ -29,7 +29,11 @@ exports[`should start with a disabled selection button 1`] = `
   </p>
   <div
     className="DateResult"
-  />
+  >
+    <div
+      className="DateResult"
+    />
+  </div>
 </div>
 `;
 
@@ -62,6 +66,10 @@ exports[`should start with no date selected 1`] = `
   </p>
   <div
     className="DateResult"
-  />
+  >
+    <div
+      className="DateResult"
+    />
+  </div>
 </div>
 `;

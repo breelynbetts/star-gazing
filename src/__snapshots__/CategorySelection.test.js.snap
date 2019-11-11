@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should start with an empty search field 1`] = `
+<div>
+  <span>
+    <div>
+      Loading ...
+    </div>
+  </span>
+</div>
+`;

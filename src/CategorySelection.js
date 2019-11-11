@@ -27,13 +27,13 @@ function CategorySelection() {
             <div>
                 {data[0].events.map((event) => {
                     return (
-                        <div className='eventDiv'>
+                        <div key={event.id} className='eventDiv'>
                             <h4 className='eventName'key={event.id}>{event.title}</h4 >
                             {event.geometries === undefined ? <div>Loading ...</div> : 
                                 <div>
                                 {event.geometries.map((loc) => {
                                     return (
-                                        <div>
+                                        <div key={loc.date}>
                                             <p>{loc.date}</p>
                                             <p>location: <br/>
                                                lat:  {loc.coordinates[0]} lng:  { loc.coordinates[1] }
@@ -49,10 +49,10 @@ function CategorySelection() {
             </div>
             }
             {error && (
-          <div className="error">
-            {error}
-          </div>
-        )}
+                <div className="error">
+                    {error}
+                </div>
+            )}
        </span>
     </div>
     )

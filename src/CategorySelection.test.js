@@ -5,13 +5,17 @@ import ReactTestUtils from 'react-dom/test-utils'
 
 import sinon from 'sinon'
 
-import SearchForm from './SearchForm'
-
 import * as api from './api'
 import CategorySelection from './CategorySelection'
 
 
-const setupAndQuerySearchForm = async () => {
+it('should start with an empty search field', () => {
+  const component = TestRenderer.create(<CategorySelection />)
+  const tree = component.toJSON()
+  expect(tree).toMatchSnapshot()
+})
+
+const setupAndLoadPage = async () => {
     const div = document.createElement('div')
     ReactTestUtils.act(() => {
       ReactDOM.render(<CategorySelection />, div)
@@ -52,7 +56,7 @@ describe('API calls', () => {
         ]
       }))
   
-      div = await setupAndQuerySearchForm()
+      div = await setupAndLoadPage()
     })
   
     afterEach(() => {
@@ -68,7 +72,7 @@ describe('API calls', () => {
       sinon.stub(api, 'searchEvents')
       api.searchEvents.returns(Promise.reject('Mock failure'))
   
-      div = await setupAndQuerySearchForm()
+      div = await setupAndLoadPage()
     })
   
     afterEach(() => {
