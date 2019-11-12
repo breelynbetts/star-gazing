@@ -5,10 +5,12 @@ import './style/CategorySelection.css'
 import { apiHost } from './api'
 
 import moment from 'moment'; 
+import {MapContainer, Map} from './components/Map.js'
 
 function CategorySelection() {
     const [data, setData] = useState([])
     const [error, setError] = useState(null)
+    const [locations, setLocations] = useState([])
     
     useEffect(() => apiHost('http://localhost:4000'))
 
@@ -17,6 +19,7 @@ function CategorySelection() {
             try {
                 const result = await searchEvents({limit: 5});
                 setData([result])
+                setLocations(result.events)
             } catch (e) {
                 setError('Sorry, but something went wrong.')
             }
@@ -24,8 +27,15 @@ function CategorySelection() {
         fetchData();
       }, []);
 
+    console.log(locations)
+
     return (
         <div>
+            {locations[0] === undefined ? <div>Working on displaying map ... </div> :
+                <MapContainer>
+                    <Map results={locations}/>
+                </MapContainer>
+            }
            <span >
            {data[0] === undefined ? <div>Loading ...</div> : 
             <div>
@@ -57,5 +67,6 @@ function CategorySelection() {
     </div>
     )
 }
+
 
 export default CategorySelection
