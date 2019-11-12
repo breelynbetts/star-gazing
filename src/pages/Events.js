@@ -3,7 +3,6 @@ import CategorySelection from '../CategorySelection.js'
 // import Map from '../components/Map.js'
 
 import '../style/Events.css'
-// import Marker from '../components/Marker.js'
 
 class Events extends Component {
     

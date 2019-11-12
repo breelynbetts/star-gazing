@@ -57,6 +57,6 @@ export default React.memo(Map, shouldUpdate)
 Map.defaultProps = {
   options: {
     center: { lat: 48, lng: 8 },
-    zoom: 1.5,
+    zoom: 3,
   },
 }

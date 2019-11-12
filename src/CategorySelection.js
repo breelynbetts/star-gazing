@@ -4,6 +4,7 @@ import { searchEvents } from './api.js'
 import './style/CategorySelection.css'
 import { apiHost } from './api'
 
+import moment from 'moment'; 
 
 function CategorySelection() {
     const [data, setData] = useState([])
@@ -15,7 +16,6 @@ function CategorySelection() {
         const fetchData = async () => {
             try {
                 const result = await searchEvents({limit: 5});
-                console.log('result', result)
                 setData([result])
             } catch (e) {
                 setError('Sorry, but something went wrong.')
@@ -36,8 +36,8 @@ function CategorySelection() {
                             {event.geometries.map((loc) => {
                                 return (
                                     <div key={loc.date}>
-                                        <p>{loc.date}</p>
-                                        <p>location: <br/>
+                                        <p>{moment(loc.date).format('LLLL')}</p>
+                                        <p>location: 
                                            lat:  {loc.coordinates[0]} lng:  { loc.coordinates[1] }
                                         </p>                            
                                     </div>
