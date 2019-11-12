@@ -6,14 +6,14 @@ const NASAImage = props => {
   const { image } = props
   return (
     <div className="NASAImage">
-      {image.links === undefined || image.data === undefined ? <div>Loading...</div> :
+      {image === undefined ? <div>Loading...</div> :
       <div>
-        {image.data.map((id) => {
+        {image.map((item, index) => {
           return (
-            <div key={id.nasa_id}>
-              {image.links.map((image) => {
+            <div key={index}>
+              {item.links.map((link) => {
               return (
-                <img src={image.href} alt={id.nasa_id} key={id.nasa_id}/>
+                <img src={link.href} alt={item.data[0].nasa_id} key={item.data[0].nasa_id}/>
               )
               })}
             </div>

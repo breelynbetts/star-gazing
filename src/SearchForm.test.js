@@ -139,7 +139,8 @@ describe('API calls', () => {
     // Note how this _isn’t_ a snapshot test because we’re checking whether a function was called with
     // the right arguments.
     expect(api.searchNasa.firstCall.args[0]).toEqual({
-      q: 'hello' // Our test search term.
+      q: 'hello',
+      media_type: "image", // Our test search term.
     })
   })
 

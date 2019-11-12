@@ -2,16 +2,21 @@ import React, { useEffect, useState } from 'react'
 import { searchEvents } from './api.js'
 
 import './style/CategorySelection.css'
+import { apiHost } from './api'
+
 
 function CategorySelection() {
     const [data, setData] = useState([])
     const [error, setError] = useState(null)
     
+    useEffect(() => apiHost('https://eonet.sci.gsfc.nasa.gov/api/v2.1'))
+
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const result = await searchEvents({});
-                setData(result.data)
+                const result = await searchEvents({limit: 5});
+                console.log('result', result)
+                setData(result)
             } catch (e) {
                 setError('Sorry, but something went wrong.')
             }
@@ -20,6 +25,7 @@ function CategorySelection() {
         
       }, []);
 
+    console.log(data)
     return (
         <div>
            <span >

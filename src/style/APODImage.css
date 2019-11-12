@@ -2,7 +2,7 @@
 
 .APODImage {
     margin: 2% 10%;
-    height: 600px;
+    height: 500px;
     padding: 10px;
     border-width: 1px;
     border-style: solid;
@@ -10,26 +10,29 @@
 }
 
 .apod {
-    max-height: 100%;
-    width: auto;
+    height: 100%;
+    width: 50%;
     float: left;
     padding-right: 30px;
+    object-fit: cover;
 }
 
 .descriptionDiv {
-    height: 100%;
+    width: 48%;
+    margin-left: 50%;
+    
     align-items: center;
-    padding-left: 40%;
-    padding-right: 5%;
+    
 }
 
 h2 {
     font-family: 'Staatliches', cursive;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .description {
     font-family: 'Montserrat', sans-serif;
-    padding: 5px;
+    /* padding: 5px; */
+    font-size: 15px;
 }
 

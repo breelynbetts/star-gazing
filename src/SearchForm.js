@@ -1,15 +1,15 @@
-import React, { useState } from 'react'
-
+import React, { useState, useEffect } from 'react'
 import './style/SearchForm.css'
-
 import SearchResults from './SearchResults'
-
 import { searchNasa } from './api'
+import { apiHost } from './api'
 
 const SearchForm = () => {
   const [error, setError] = useState(null)
   const [query, setQuery] = useState('')
   const [images, setImages] = useState([])
+
+  useEffect(() => apiHost('https://images-api.nasa.gov'))
 
   const handleQueryChange = event => setQuery(event.target.value)
 
@@ -20,15 +20,15 @@ const SearchForm = () => {
 
     try {
       const result = await searchNasa({
-        q: query
+        q: query,
+        media_type: 'image',
       })
-
-      setImages(result.data)
+      setImages([result.collection.items])
     } catch (error) {
       setError('Sorry, but something went wrong.')
     }
   }
-  
+  console.log(images)
   return (
     <div>
       <form className="SearchForm" onSubmit={performQuery}>
@@ -46,7 +46,9 @@ const SearchForm = () => {
         )}
       </form>
       <div className='ImageResults'>
-        <SearchResults results={images} />
+        {images === undefined ? <div>Loading ... </div> :
+          <SearchResults results={images} />
+        } 
       </div>
     
     </div>

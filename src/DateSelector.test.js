@@ -108,7 +108,7 @@ describe('API calls', () => {
       // Note how this _isn’t_ a snapshot test because we’re checking whether a function was called with
       // the right arguments.
       expect(api.searchAstronomyPicture.firstCall.args[0]).toEqual({
-        q: '1999-09-25' // Our test search term.
+        date: '1999-09-25' // Our test search term.
       })
     })
   

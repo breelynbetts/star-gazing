@@ -6,6 +6,7 @@ import '../style/Events.css'
 // import Marker from '../components/Marker.js'
 
 class Events extends Component {
+    
     render () {
         return (
             <div>

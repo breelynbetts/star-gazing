@@ -1,225 +1,79 @@
-const apiHost = () => {} // No-op in our mock version.
+let api = 'https://misconfigured-app.com/'
 
-const searchNasa = () => Promise.resolve({
-  data: [
-    {
-      "href": "https://images-assets.nasa.gov/image/PIA20695/collection.json",
-      "links": [{
-        "rel": "preview",
-        "href": "https://images-assets.nasa.gov/image/PIA20695/PIA20695~thumb.jpg",
-        "render": "image"
-      }],
-      "data": [{
-        "title": "Frankenstein Galaxy",
-        "description_508": "NASA's GALEX reveals the true nature of UGC 1382, dubbed the Frankenstein galaxy. Scientists have discovered that UGC 1382 is a giant, and one of the largest isolated galaxies known.",
-        "date_created": "2016-07-11T15:50:52Z",
-        "description": "The galaxy UGC 1382 has been revealed to be far larger and stranger than previously thought. Astronomers relied on a combination of ground-based and space telescopes to uncover the true nature of this \"Frankenstein galaxy.\" The composite image shows the same galaxy as viewed with different instruments. The component images are also available.  In the image at left, UGC 1382 appears to be a simple elliptical galaxy, based on optical data from the Sloan Digital Sky Survey (SDSS). But spiral arms emerged when astronomers incorporated ultraviolet data from the Galaxy Evolution Explorer (GALEX) and deep optical data from SDSS, as seen in the middle image. Combining that with a view of low-density hydrogen gas (shown in green), detected at radio wavelengths by the Very Large Array, scientists discovered that UGC 1382 is a giant, and one of the largest isolated galaxies known.  GALEX in particular was able detect very faint features because it operated from space, which is necessary for UV observations because ultraviolet light is absorbed by the Earth's atmosphere. Astronomers also used Stripe 82 of SDSS, a small region of sky where SDSS imaged the sky 80 times longer than the original standard SDSS survey. This enabled optical detection of much fainter features as well.  http://photojournal.jpl.nasa.gov/catalog/PIA20695",
-        "secondary_creator": "NASA/JPL/Caltech/SDSS/NRAO",
-        "media_type": "image",
-        "keywords": [
-          "Galaxy Evolution Explorer GALEX"
-        ],
-        "nasa_id": "PIA20695",
-        "center": "JPL"
-      }]
-    },
-    {
-      "href": "https://images-assets.nasa.gov/image/astronomers-set-a-new-galaxy-distance-record_17389972462_o/collection.json",
-      "links": [{
-        "rel": "preview",
-        "href": "https://images-assets.nasa.gov/image/astronomers-set-a-new-galaxy-distance-record_17389972462_o/astronomers-set-a-new-galaxy-distance-record_17389972462_o~thumb.jpg",
-        "render": "image"
-      }],
-      "data": [{
-        "title": "Astronomers Set a New Galaxy Distance Record",
-        "description": "This is a Hubble Space Telescope image of the farthest spectroscopically confirmed galaxy observed to date (inset). It was identified in this Hubble image of a field of galaxies in the CANDELS survey (Cosmic Assembly Near-infrared Deep Extragalactic Legacy Survey). NASA’s Spitzer Space Telescope also observed the unique galaxy. The W. M. Keck Observatory was used to obtain a spectroscopic redshift (z=7.7), extending the previous redshift record. Measurements of the stretching of light, or redshift, give the most reliable distances to other galaxies. This source is thus currently the most distant confirmed galaxy known, and it appears to also be one of the brightest and most massive sources at that time. The galaxy existed over 13 billion years ago. The near-infrared light image of the galaxy (inset) has been colored blue as suggestive of its young, and hence very blue, stars. The CANDELS field is a combination of visible-light and near-infrared exposures.  Credits: NASA, ESA, P. Oesch (Yale U.)",
-        "nasa_id": "astronomers-set-a-new-galaxy-distance-record_17389972462_o",
-        "media_type": "image",
-        "keywords": [
-          "Hubble",
-          "HST",
-          "Hubble Space Telescope",
-          "galaxy"
-        ],
-        "date_created": "2015-05-06T00:00:00Z",
-        "center": "GSFC"
-      }]
-    },
-    {
-      "href": "https://images-assets.nasa.gov/image/PIA14090/collection.json",
-      "links": [{
-        "rel": "preview",
-        "href": "https://images-assets.nasa.gov/image/PIA14090/PIA14090~thumb.jpg",
-        "render": "image"
-      }],
-      "data": [{
-        "title": "Little Galaxies Pack a Big Punch",
-        "description_508": "These postage-stamp images taken by NASA Galaxy Evolution Explorer are helping to solve a mystery -- why do the littlest of galaxies produce the biggest of star explosions, or supernovae?",
-        "date_created": "2011-04-21T17:00:27Z",
-        "description": "These postage-stamp images taken by NASA Galaxy Evolution Explorer are helping to solve a mystery -- why do the littlest of galaxies produce the biggest of star explosions, or supernovae?",
-        "secondary_creator": "NASA/JPL-Caltech",
-        "media_type": "image",
-        "keywords": [
-          "Galaxy Evolution Explorer GALEX"
-        ],
-        "nasa_id": "PIA14090",
-        "center": "JPL"
-      }]
-    },
-    {
-      "href": "https://images-assets.nasa.gov/image/PIA17246/collection.json",
-      "links": [{
-        "rel": "preview",
-        "href": "https://images-assets.nasa.gov/image/PIA17246/PIA17246~thumb.jpg",
-        "render": "image"
-      }],
-      "data": [{
-        "title": "Galaxy Pencil-Thin Profile",
-        "description_508": "This image from NASA Galaxy Evolution Explorer shows NGC 4565, one of the nearest and brightest galaxies not included in the famous list by 18th-century comet hunter Charles Messier.",
-        "date_created": "2013-06-28T20:00:02Z",
-        "description": "This image from NASA Galaxy Evolution Explorer shows NGC 4565, one of the nearest and brightest galaxies not included in the famous list by 18th-century comet hunter Charles Messier.",
-        "secondary_creator": "NASA/JPL-Caltech",
-        "media_type": "image",
-        "keywords": [
-          "Galaxy Evolution Explorer GALEX"
-        ],
-        "nasa_id": "PIA17246",
-        "center": "JPL"
-      }]
-    },
-    {
-      "href": "https://images-assets.nasa.gov/image/PIA17554/collection.json",
-      "links": [{
-        "rel": "preview",
-        "href": "https://images-assets.nasa.gov/image/PIA17554/PIA17554~thumb.jpg",
-        "render": "image"
-      }],
-      "data": [{
-        "title": "Galaxies Grow from Inside Out",
-        "description_508": "Evidence from NASA Wide-field Infrared Survey Explorer and Galaxy Evolution Explorer missions provide support for the inside-out theory of galaxy evolution, which holds that star formation starts at the core of the galaxy and spreads outward.",
-        "date_created": "2013-10-31T20:39:15Z",
-        "description": "Evidence from NASA Wide-field Infrared Survey Explorer and Galaxy Evolution Explorer missions provide support for the inside-out theory of galaxy evolution, which holds that star formation starts at the core of the galaxy and spreads outward.",
-        "secondary_creator": "NASA/JPL-Caltech",
-        "media_type": "image",
-        "keywords": [
-          "Galaxy Evolution Explorer GALEX,Wide-field Infrared Survey Exp"
-        ],
-        "nasa_id": "PIA17554",
-        "center": "JPL"
-      }]
-    }
-  ]
-})
+const API_KEY = 'DEMO_KEY' // Giphy's public beta key (thank you Giphy).
 
-const searchAstronomyPicture = () => Promise.resolve({
-  data: [{
-    "copyright": "Eric Wagner",
-    "date": "2019-10-10",
-    "explanation": "On September 24, a late evening commercial flight from Singapore to Australia offered stratospheric views of the southern hemisphere's night sky, if you chose a window seat. In fact, a well-planned seating choice with a window facing toward the Milky Way allowed the set up of a sensitive digital camera on a tripod mount to record the galaxy's central bulge in a series of 10 second long exposures.  By chance, one of the exposures caught this bright fireball meteor in the starry frame. Reflected along the wing of the A380 aircraft, the brilliant greenish streak is also internally reflected in the double layer window, producing a fainter parallel to the original meteor track. In the southern sky Jupiter is the bright source beneath the galactic bulge and seen next to a green beacon, just off the wing tip.",
-    "hdurl": "https://apod.nasa.gov/apod/image/1910/MWBolideEricWagner2400.jpg",
-    "media_type": "image",
-    "service_version": "v1",
-    "title": "Mid-Air Meteor and Milky Way",
-    "url": "https://apod.nasa.gov/apod/image/1910/MWBolideEricWagner1200.jpg"
-  }]
+const apiHost = host => { api = host }
+const urlFor = resource => `${api}${resource}`
 
-})
+console.log(apiHost)
+const HTTP_OK = 200
 
-const searchEvents = () => Promise.resolve({
-  data: [{
-    "title": "EONET Events",
-    "description": "Natural events from EONET.",
-    "link": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/events",
-    "events": [
-      {
-        "id": "EONET_4475",
-        "title": "Wildfires - Los Angeles County (Tick Fire), California, United States",
-        "description": "",
-        "link": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/events/EONET_4475",
-        "categories": [
-          {
-            "id": 8,
-            "title": "Wildfires"
-          }
-        ],
-        "sources": [
-          {
-            "id": "PDC",
-            "url": "http://emops.pdc.og/emops/?hazard_id=96981"
-          }
-        ],
-        "geometries": [
-          {
-            "date": "2019-10-24T18:16:00Z",
-            "type": "Point",
-            "coordinates": [
-              -118.39468413,
-              34.457634347
-            ]
-          }
-        ]
-      },
-      {
-        "id": "EONET_4476",
-        "title": "Wildfires - San Bernardino County (Old Water Fire), California, United States",
-        "description": "",
-        "link": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/events/EONET_4476",
-        "categories": [
-          {
-            "id": 8,
-            "title": "Wildfires"
-          }
-        ],
-        "sources": [
-          {
-            "id": "PDC",
-            "url": "http://emops.pdc.org/emops/?hazard_id=96977"
-          }
-        ],
-        "geometries": [
-          {
-            "date": "2019-10-24T15:11:00Z",
-            "type": "Point",
-            "coordinates": [
-              -117.26913,
-              34.17922
-            ]
-          }
-        ]
-      },
-      {
-        "id": "EONET_4474",
-        "title": "Wildfire -Sonoma County (Kincade Fire), California, United States",
-        "description": "",
-        "link": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/events/EONET_4474",
-        "categories": [
-          {
-            "id": 8,
-            "title": "Wildfires"
-          }
-        ],
-        "sources": [
-          {
-            "id": "PDC",
-            "url": "http://emops.pdc.org/emops/?hazard_id=96971"
-          }
-        ],
-        "geometries": [
-          {
-            "date": "2019-10-24T13:32:00Z",
-            "type": "Point",
-            "coordinates": [
-              -122.807158563,
-              38.758962281
-            ]
-          }
-        ]
-      }
-    ]
-  }  
-  ]
+const throwResponseError = response => {
+  const error = new Error(response.statusText)
+  error.response = response
+  throw error
+}
 
-})
+const emitNativeError = error => {
+  throw error
+}
+
+const statusCheck = successStatuses => response => {
+  if (successStatuses.includes(response.status)) {
+    return response
+  } else {
+    throwResponseError(response)
+  }
+}
+
+const okCheck = statusCheck([HTTP_OK])
+
+const headers = {
+  'Content-Type': 'application/json'
+}
+
+const paramsWithApiKey = params => {
+  const result = new URLSearchParams(params)
+  result.set('api_key', API_KEY)
+  return result
+}
+
+const paramsWithNoKey = params => {
+  const result = new URLSearchParams(params)
+  return result
+}
+
+// The fetch function initiates a connection to the web service.
+// fetch returns a _promise_: an object that represents a future result.
+// Thus, the function actually returns right away. However, when the
+// anticipated result does show up, the code specifies what to do using
+// either `then` or `catch`. Both functions accept another function,
+// to be called upon a successful or failed promise, respectively.
+// Furthermore, then `then` function can be chained: its return result
+// is passed to the next `then` function as an argument. Here, the initial
+// handler converts the raw result into JSON. That JSON then goes to the
+// next handler, which does the actual work of putting the result on the
+// web page.
+//
+// The design of fetch allows this entire sequence to be rendered in a
+// _single statement_, thus obviating the need for curly braces but
+// resulting in what many will view to be a decrease in readability
+// (for those who aren’t used to functional-style programming). YMMV
+const query = (resource, params) => fetch(`${urlFor(resource)}?${paramsWithNoKey(params)}`, {
+  headers
+}).then(okCheck, emitNativeError)
+  .then(response => response.json())
+
+const queryWithApi = (resource, params) => fetch(`${urlFor(resource)}?${paramsWithApiKey(params)}`, {
+  headers
+}).then(okCheck, emitNativeError)
+  .then(response => response.json())
+
+const searchNasa = params => query('/search', params)
+console.log(searchNasa)
+const searchAstronomyPicture = params => queryWithApi('/apod', params)
+const searchEvents = params => query('/events', params)
+console.log(searchEvents)
 
 export {
   apiHost,

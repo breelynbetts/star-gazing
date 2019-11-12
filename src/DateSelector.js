@@ -1,13 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { searchAstronomyPicture } from './api.js'
 import DateResult from './DateResult.js'
 
 import './style/DateSelector.css'
 
+import { apiHost } from './api'
+
 function DateSelector() {
   const [error, setError] = useState(null)
   const [query, setQuery] = useState('')
   const [date, setDate] = useState([])
+
+  useEffect(() => apiHost('https://api.nasa.gov/planetary'))
   
   const handleQueryChange = event => setQuery(event.target.value)
   
@@ -18,10 +22,9 @@ function DateSelector() {
   
       try {
         const result = await searchAstronomyPicture({
-          q: query
+          date: query,
         })
-  
-        setDate(result.data)
+        setDate([result])
       } catch (error) {
         setError('Sorry, but something went wrong.')
       }
