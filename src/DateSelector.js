@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { searchAstronomyPicture } from './api.js'
 import DateResult from './DateResult.js'
+import moment from 'moment'; 
 
 import './style/DateSelector.css'
 
@@ -33,7 +34,7 @@ function DateSelector() {
   return (
       <div>
         <form className="DatePicker" onSubmit={handleInput}>
-          <input name="query" type="date" value={query} onChange={handleQueryChange}/>
+          <input name="query" type="date" value={query} onChange={handleQueryChange} max={ moment().format('YYYY-MM-DD')}/>
           <div className="ButtonDiv">
             <button type="submit" disabled={!query}>select date</button>
           </div>

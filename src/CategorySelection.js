@@ -9,23 +9,21 @@ function CategorySelection() {
     const [data, setData] = useState([])
     const [error, setError] = useState(null)
     
-    useEffect(() => apiHost('https://eonet.sci.gsfc.nasa.gov/api/v2.1'))
+    useEffect(() => apiHost('http://localhost:4000'))
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const result = await searchEvents({limit: 5});
                 console.log('result', result)
-                setData(result)
+                setData([result])
             } catch (e) {
                 setError('Sorry, but something went wrong.')
             }
         }
         fetchData();
-        
       }, []);
 
-    console.log(data)
     return (
         <div>
            <span >

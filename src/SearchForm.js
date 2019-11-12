@@ -28,7 +28,7 @@ const SearchForm = () => {
       setError('Sorry, but something went wrong.')
     }
   }
-  console.log(images)
+
   return (
     <div>
       <form className="SearchForm" onSubmit={performQuery}>

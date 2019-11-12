@@ -1,11 +1,9 @@
 let api = 'https://misconfigured-app.com/'
-
-const API_KEY = 'DEMO_KEY' // Giphy's public beta key (thank you Giphy).
+const API_KEY = 'DEMO_KEY' 
 
 const apiHost = host => { api = host }
 const urlFor = resource => `${api}${resource}`
 
-console.log(apiHost)
 const HTTP_OK = 200
 
 const throwResponseError = response => {
@@ -64,16 +62,14 @@ const query = (resource, params) => fetch(`${urlFor(resource)}?${paramsWithNoKey
 }).then(okCheck, emitNativeError)
   .then(response => response.json())
 
-const queryWithApi = (resource, params) => fetch(`${urlFor(resource)}?${paramsWithApiKey(params)}`, {
+const queryWithApiKey = (resource, params) => fetch(`${urlFor(resource)}?${paramsWithApiKey(params)}`, {
   headers
 }).then(okCheck, emitNativeError)
   .then(response => response.json())
 
 const searchNasa = params => query('/search', params)
-console.log(searchNasa)
-const searchAstronomyPicture = params => queryWithApi('/apod', params)
+const searchAstronomyPicture = params => queryWithApiKey('/apod', params)
 const searchEvents = params => query('/events', params)
-console.log(searchEvents)
 
 export {
   apiHost,
