@@ -35,10 +35,10 @@ function CategorySelection() {
                             <h4 className='eventName'key={event.id}>{event.title}</h4 >   
                             {event.geometries.map((loc) => {
                                 return (
-                                    <div key={loc.date}>
+                                    <div className='eventData' key={loc.date}>
                                         <p>{moment(loc.date).format('LLLL')}</p>
                                         <p>location: 
-                                           lat:  {loc.coordinates[0]} lng:  { loc.coordinates[1] }
+                                           lat:  {loc.coordinates[0]}, lng:  { loc.coordinates[1] }
                                         </p>                            
                                     </div>
                                 )

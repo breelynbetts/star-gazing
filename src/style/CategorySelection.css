@@ -15,3 +15,13 @@
 .eventDiv:first-child {
     margin-top: 35px;
 }
+
+.eventData {
+    border-bottom: 0.5px dashed black;
+    width: 60%;
+    margin-left: 20%;
+}
+
+.eventData:last-child {
+    border-bottom: none;
+}
