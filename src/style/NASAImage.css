@@ -5,3 +5,8 @@
     height: 375px;
     object-fit: cover;
 }
+
+SRLWrapper {
+    width: 50%;
+    height: 50%;
+}

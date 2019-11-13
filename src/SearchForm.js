@@ -3,6 +3,7 @@ import './style/SearchForm.css'
 import SearchResults from './SearchResults'
 import { searchNasa } from './api'
 import { apiHost } from './api'
+import SimpleReactLightbox from "simple-react-lightbox"; 
 
 const SearchForm = () => {
   const [error, setError] = useState(null)
@@ -47,7 +48,9 @@ const SearchForm = () => {
       </form>
       <div className='ImageResults'>
         {images === undefined ? <div>Loading ... </div> :
-          <SearchResults results={images} />
+          <SimpleReactLightbox>
+            <SearchResults results={images} />
+          </SimpleReactLightbox>
         } 
       </div>
     
