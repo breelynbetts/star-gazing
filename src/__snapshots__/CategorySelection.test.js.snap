@@ -2,6 +2,23 @@
 
 exports[`should start with events on the page 1`] = `
 <div>
+  <div
+    style={
+      Object {
+        "height": "400px",
+        "marginLeft": "25%",
+        "width": "50%",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "height": "100%",
+        }
+      }
+    />
+  </div>
   <span>
     <div />
   </span>
