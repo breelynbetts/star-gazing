@@ -18,7 +18,7 @@ function CategorySelection() {
         const fetchData = async () => {
             try {
                 const result = await searchEvents({limit: 5});
-                setData([result])
+                setData(result.events)
                 setLocations(result.events)
             } catch (e) {
                 setError('Sorry, but something went wrong.')
@@ -26,8 +26,6 @@ function CategorySelection() {
         }
         fetchData();
       }, []);
-
-    console.log(locations)
 
     return (
         <div>
@@ -37,9 +35,9 @@ function CategorySelection() {
                 </MapContainer>
             } */}
            <span >
-           {data[0] === undefined ? <div>Loading ...</div> : 
+           {data === undefined ? <div>Loading ...</div> : 
             <div>
-                {data[0].events.map((event) => {
+                {data.map((event) => {
                     return (
                         <div key={event.id} className='eventDiv'>
                             <h4 className='eventName'key={event.id}>{event.title}</h4 >   

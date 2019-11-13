@@ -32,38 +32,35 @@ describe('API calls', () => {
       // To manage size, we supply a mock response that contains _only_ what the app will need. This does mean
       // that we need to revise the mock response if our app starts using more (or different) data.
       api.searchEvents.returns(Promise.resolve({
-        data: [{
-          "title": "EONET Events",
-          "description": "Natural events from EONET.",
-          "link": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/events",
-          "events": [
+        events: [
             {
-              "id": "EONET_4475",
-              "title": "Wildfires - Los Angeles County (Tick Fire), California, United States",
-              "description": "",
-              "link": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/events/EONET_4475",
+              "id": "EONET_4498",
+              "title": "Wildfires - New South Wales, Australia",
+                    "description": "",
+              "link": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/events/EONET_4498",
               "categories": [
                 {
                   "id": 8,
                   "title": "Wildfires"
                 }
               ],
-              "sources": [{
-                "id": "PDC",
-                "url": "http://emops.pdc.og/emops/?hazard_id=96981"
-              }],
+              "sources": [
+                {
+                  "id": "PDC",
+                  "url": "http://emops.pdc.org/emops/?hazard_id=97693"
+                }
+              
+              ],
               "geometries": [
                 {
-                  "date": "2019-10-24T18:16:00Z",
-                  "type": "Point",
-                  "coordinates": [
-                    -118.39468413,
-                    34.457634347
-                  ]
+                  "date": "2019-11-11T21:24:00Z",
+                  "type": "Point", 
+                  "coordinates": [ 151.94026, -30.14679 ]
                 }
+              
               ]
-            }]
-          }]
+            }
+        ]
       }))
   
       div = await setupAndLoadPage()

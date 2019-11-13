@@ -3,9 +3,7 @@
 exports[`should start with events on the page 1`] = `
 <div>
   <span>
-    <div>
-      Loading ...
-    </div>
+    <div />
   </span>
 </div>
 `;
