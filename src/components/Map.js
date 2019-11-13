@@ -14,6 +14,7 @@ function Map() {
     const [locations, setLocations] = useState([])
     const [error, setError] = useState(null)
     const [selectedEvent, setSelectedEvent] = useState(null)
+    const [title, setTitle] = useState(null)
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -43,23 +44,25 @@ function Map() {
                                         lat: coord.coordinates[1],
                                         lng: coord.coordinates[0]
                                     }}
-                                    onClick={() => {setSelectedEvent(coord)}}
+                                    onClick={() => {
+                                        setSelectedEvent(coord); setTitle(loc.title)
+                                    }}
                                     name={loc.title}
                                 />
-                                
+                                {selectedEvent && (
                                 <InfoWindow
                                     onCloseClick={() => {setSelectedEvent(null)}}
                                     position={{
-                                        lat: coord.coordinates[1],
-                                        lng: coord.coordinates[0]
+                                        lat: selectedEvent.coordinates[1],
+                                        lng: selectedEvent.coordinates[0]
                                     }}
                                 >
                                     <div>
-                                        <p>{loc.title}</p>
-                                        <p>{moment(coord.date).format('LLLL')}</p>
+                                        <p>{title}</p>
+                                        <p>{moment(selectedEvent.date).format('LLLL')}</p>
                                     </div>
                                 </InfoWindow>
-                                
+                                )}
                             </div>
                             )
                         })}
