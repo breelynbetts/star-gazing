@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import { 
     GoogleMap, 
     Marker, 
@@ -7,16 +7,31 @@ import {
     withScriptjs 
 } from "react-google-maps";
 
-const Map = props => (
-    // const [selectedEvent, setSelectedEvent] = useState(null)
-    // const { data } = props
-    // console.log(data)
-    // console.log('PROPS', props.results)
+import { searchEvents } from '../api.js'
+import moment from 'moment'
+
+function Map() {
+    const [locations, setLocations] = useState([])
+    const [error, setError] = useState(null)
+    const [selectedEvent, setSelectedEvent] = useState(null)
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const result = await searchEvents({limit: 5});
+                setLocations(result.events)
+            } catch (e) {
+                setError('Sorry, but something went wrong.')
+            }
+        }
+        fetchData();
+      }, []);
+    
+    return (
         <GoogleMap
-            defaultZoom={3}
-            defaultCenter={{ lat: 45.4211, lng: -75.6903 }}
+            defaultZoom={1}
+            defaultCenter={{ lat: 0, lng: 0}}
         >
-            {props.results.map((loc) => {
+            {locations.map((loc) => {
                 return (
                     <div>
                         {loc.geometries.map((coord) => {
@@ -25,25 +40,26 @@ const Map = props => (
                                 <Marker 
                                     key={coord.date}
                                     position={{
-                                        lat: coord.coordinates[0],
-                                        lng: coord.coordinates[1]
+                                        lat: coord.coordinates[1],
+                                        lng: coord.coordinates[0]
                                     }}
-                                    // onClick={() => {setSelectedEvent(coord)}}
+                                    onClick={() => {setSelectedEvent(coord)}}
+                                    name={loc.title}
                                 />
-                                {/* {selectedEvent && (
+                                
                                 <InfoWindow
-                                    // onCloseClick={() => {setSelectedEvent(null)}}
+                                    onCloseClick={() => {setSelectedEvent(null)}}
                                     position={{
-                                        lat: selectedEvent.coordinates[1],
-                                        lng: selectedEvent.coordinates[0]
+                                        lat: coord.coordinates[1],
+                                        lng: coord.coordinates[0]
                                     }}
                                 >
                                     <div>
                                         <p>{loc.title}</p>
-                                        <p>{moment(selectedEvent.date).format('LLLL')}</p>
+                                        <p>{moment(coord.date).format('LLLL')}</p>
                                     </div>
                                 </InfoWindow>
-                                )} */}
+                                
                             </div>
                             )
                         })}
@@ -51,7 +67,7 @@ const Map = props => (
                 )
             })}
         </GoogleMap>
-)
+)}
 
 const MapWrapped = withScriptjs(withGoogleMap(Map));
 
