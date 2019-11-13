@@ -20,18 +20,7 @@ const setupAndLoadPage = async () => {
     await ReactTestUtils.act(async () => {
       ReactDOM.render(<CategorySelection />, div)
     })
-  
-    // const searchInput = div.querySelector('input')
-    // ReactTestUtils.act(() => {
-    //   searchInput.value = 'hello'
-    //   ReactTestUtils.Simulate.change(searchInput)
-    // })
-  
-    // const searchForm = div.querySelector('form')
-    // await ReactTestUtils.act(async () => {
-    //   await ReactTestUtils.Simulate.submit(searchForm)
-    // })
-  
+    
     return div
   }
 

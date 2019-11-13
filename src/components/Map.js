@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { Component } from 'react'
 import { 
     GoogleMap, 
     Marker, 
@@ -6,17 +6,17 @@ import {
     withGoogleMap, 
     withScriptjs 
 } from "react-google-maps";
-import moment from 'moment'; 
 
-const Map = props => {
-    const [selectedEvent, setSelectedEvent] = useState(null)
-    const data = Array.from(props)
-    return (
+const Map = props => (
+    // const [selectedEvent, setSelectedEvent] = useState(null)
+    // const { data } = props
+    // console.log(data)
+    // console.log('PROPS', props.results)
         <GoogleMap
             defaultZoom={3}
             defaultCenter={{ lat: 45.4211, lng: -75.6903 }}
         >
-            {data.map((loc) => {
+            {props.results.map((loc) => {
                 return (
                     <div>
                         {loc.geometries.map((coord) => {
@@ -28,11 +28,11 @@ const Map = props => {
                                         lat: coord.coordinates[0],
                                         lng: coord.coordinates[1]
                                     }}
-                                    onClick={() => {setSelectedEvent(coord)}}
+                                    // onClick={() => {setSelectedEvent(coord)}}
                                 />
                                 {/* {selectedEvent && (
                                 <InfoWindow
-                                    onCloseClick={() => {setSelectedEvent(null)}}
+                                    // onCloseClick={() => {setSelectedEvent(null)}}
                                     position={{
                                         lat: selectedEvent.coordinates[1],
                                         lng: selectedEvent.coordinates[0]
@@ -51,8 +51,7 @@ const Map = props => {
                 )
             })}
         </GoogleMap>
-    )
-}
+)
 
 const MapWrapped = withScriptjs(withGoogleMap(Map));
 
