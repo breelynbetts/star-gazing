@@ -29,7 +29,7 @@ function Map() {
     
     return (
         <GoogleMap
-            defaultZoom={1}
+            defaultZoom={1.5}
             defaultCenter={{ lat: 0, lng: 0}}
         >
             {locations.map((loc) => {
@@ -41,8 +41,8 @@ function Map() {
                                 <Marker 
                                     key={coord.date}
                                     position={{
-                                        lat: coord.coordinates[1],
-                                        lng: coord.coordinates[0]
+                                        lat: loc.geometries[0].coordinates[1],
+                                        lng: loc.geometries[0].coordinates[0]
                                     }}
                                     onClick={() => {
                                         setSelectedEvent(coord); setTitle(loc.title)
@@ -76,7 +76,7 @@ const MapWrapped = withScriptjs(withGoogleMap(Map));
 
 function MapContainer() {
     return (
-        <div style={{ width: "50%", height: "400px", marginLeft: "25%" }}>
+        <div style={{ width: "50%", height: "425px", marginLeft: "25%", position:'relative', zIndex:'0'}}>
           <MapWrapped
             googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${
               process.env.REACT_APP_GOOGLE_KEY

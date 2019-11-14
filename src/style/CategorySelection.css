@@ -6,22 +6,36 @@
 }
 
 .eventDiv {
-    width: 50%;
-    margin-left: 25%;
+    width: 46%;
     margin-bottom: 15px;
     border: 1px solid black;
+    float:left;
+    margin-right:2%;
 }
-
+.span {
+    margin-top: 500px;
+}
 .eventDiv:first-child {
     margin-top: 35px;
 }
 
-.eventData {
-    border-bottom: 0.5px dashed black;
+.eventDiv p {
+    font-family: 'Staatliches', sans-serif;
     width: 60%;
     margin-left: 20%;
 }
 
-.eventData:last-child {
-    border-bottom: none;
+.eventDiv:last-child {
+    
+}
+
+h5 {
+    font-family: 'Staatliches', cursive;
+    font-size: 17px;
+}
+
+.eventColumns {
+    width: 80%;
+    background: orange;
+    margin-left: 15%;
 }

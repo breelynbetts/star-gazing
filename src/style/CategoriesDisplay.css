@@ -1,0 +1,21 @@
+.categories {
+    width: 100%;
+}
+
+.categoryTitle {
+    font-family: 'Staatliches', cursive;
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+
+.categoryDescription {
+    font-family: 'Oswald', cursive;
+    font-size: 13px;
+    margin-top: 0px;
+}
+.columns {
+    width: 28%;
+    float: left;
+    height: 120px;
+    margin-left: 4%; 
+}

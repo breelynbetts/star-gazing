@@ -7,7 +7,7 @@ exports[`should start with a disabled selection button 1`] = `
     onSubmit={[Function]}
   >
     <input
-      max="2019-11-13"
+      max="2019-11-14"
       name="query"
       onChange={[Function]}
       type="date"
@@ -41,7 +41,7 @@ exports[`should start with no date selected 1`] = `
     onSubmit={[Function]}
   >
     <input
-      max="2019-11-13"
+      max="2019-11-14"
       name="query"
       onChange={[Function]}
       type="date"

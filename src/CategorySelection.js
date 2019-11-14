@@ -6,6 +6,7 @@ import { apiHost } from './api'
 
 import moment from 'moment'; 
 import {MapContainer, Map} from './components/Map.js'
+import CategoriesModal from './CategoriesModal'
 
 function CategorySelection() {
     const [data, setData] = useState([])
@@ -35,22 +36,17 @@ function CategorySelection() {
                 </MapContainer>
             }
            <span >
+               <CategoriesModal />
            {data === undefined ? <div>Loading ...</div> : 
             <div>
                 {data.map((event) => {
                     return (
-                        <div key={event.id} className='eventDiv'>
-                            <h4 className='eventName'key={event.id}>{event.title}</h4 >   
-                            {event.geometries.map((loc) => {
-                                return (
-                                    <div className='eventData' key={loc.date}>
-                                        <p>{moment(loc.date).format('LLLL')}</p>
-                                        <p>location: 
-                                           lat:  {loc.coordinates[0]}, lng:  { loc.coordinates[1] }
-                                        </p>                            
-                                    </div>
-                                )
-                            })}
+                        <div className='eventColumns'> 
+                            <div key={event.id} className='eventDiv'>
+                                <h4 className='eventName'key={event.id}>{event.title}</h4 >
+                                <h5>Event Category: {event.categories[0].title}</h5>  
+                                <p>{moment(event.geometries[0].date).format('LLLL')}</p>
+                            </div>
                         </div>
                     )
                 })}

@@ -1,11 +1,12 @@
 import React from 'react'
-import { SRLWrapper } from "simple-react-lightbox";
 import "./style/NASAImage.css"
+import { SRLWrapper } from "simple-react-lightbox"; 
 
 const NASAImage = props => {
   const { image } = props
   return (
     <div className="NASAImage">
+      <SRLWrapper>
       {image === undefined ? <div>Loading...</div> :
       <div>
         {image.map((item, index) => {
@@ -13,20 +14,19 @@ const NASAImage = props => {
             <div key={index}>
               {item.links.map((link) => {
               return (
-                <SRLWrapper>
-                  <a href={link.href} data-attribute="SRL">
-                    <img src={link.href} alt={item.data[0].nasa_id} key={item.data[0].nasa_id}/>
+                  <a href = {link.href} data-attribute="SRL">
+                    <img src={link.href} alt={item.data[0].nasa_id} key={item.data[0].nasa_id} alt={item.data[0].title}/>
                   </a>
-                </SRLWrapper>
               )
               })}
+              
             </div>
           )
         })}
         
       </div>
     }
-      
+      </SRLWrapper>
     </div>
   )
 }

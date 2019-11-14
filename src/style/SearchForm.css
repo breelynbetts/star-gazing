@@ -28,3 +28,8 @@
   letter-spacing: 2px;
 }
 
+.reactLightbox {
+  height: 50%;
+  width: 50%;
+  autoplaySpeed: 0;
+}

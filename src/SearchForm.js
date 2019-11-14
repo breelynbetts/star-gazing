@@ -29,6 +29,21 @@ const SearchForm = () => {
       setError('Sorry, but something went wrong.')
     }
   }
+  const options = {
+    overlayColor: "rgb(255, 255, 255, 0.9)",
+    captionStyle: {
+      captionColor: "black",
+      captionFontFamily: "Staatliches, cursive",
+      captionFontSize: "20px",
+    },
+    buttonsStyle: {
+      buttonsBackgroundColor: 'white',
+      buttonsIconColor: "black"
+    },
+    autoplaySpeed: 0,
+    transitionSpeed: 0,
+    showThumbnails: false,
+  };
 
   return (
     <div>
@@ -48,7 +63,7 @@ const SearchForm = () => {
       </form>
       <div className='ImageResults'>
         {images === undefined ? <div>Loading ... </div> :
-          <SimpleReactLightbox>
+          <SimpleReactLightbox {...options}>
             <SearchResults results={images} />
           </SimpleReactLightbox>
         } 

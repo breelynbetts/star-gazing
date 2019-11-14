@@ -70,10 +70,12 @@ const queryWithApiKey = (resource, params) => fetch(`${urlFor(resource)}?${param
 const searchNasa = params => query('/search', params)
 const searchAstronomyPicture = params => queryWithApiKey('/apod', params)
 const searchEvents = params => query('/events', params)
+const getCategories = params => query('/categories', params)
 
 export {
   apiHost,
   searchNasa,
   searchAstronomyPicture,
-  searchEvents
+  searchEvents,
+  getCategories
 }

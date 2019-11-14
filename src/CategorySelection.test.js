@@ -74,7 +74,7 @@ describe('API calls', () => {
     it('should populate the event container when results arrive', () => {
       // Our mock search results yield one image, so we expect our results container to have one child.
       const searchResults = div.querySelector('div.eventDiv')
-      expect(searchResults.children.length).toEqual(2)
+      expect(searchResults.children.length).toEqual(3)
     })
   
   })
