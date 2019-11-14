@@ -8,7 +8,7 @@ class SearchResults extends Component {
   render() {
     return (
       <div className="search">
-        {this.props.results.map(image => <NASAImage key={20} image={image} />)}
+        {this.props.results.map(image => <NASAImage key={20} image={image.items} />)}
       </div>
     )
   }

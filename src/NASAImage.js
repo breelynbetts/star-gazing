@@ -4,6 +4,7 @@ import { SRLWrapper } from "simple-react-lightbox";
 
 const NASAImage = props => {
   const { image } = props
+  console.log(image)
   return (
     <div className="NASAImage">
       <SRLWrapper>

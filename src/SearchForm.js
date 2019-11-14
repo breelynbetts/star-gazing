@@ -24,7 +24,7 @@ const SearchForm = () => {
         q: query,
         media_type: 'image',
       })
-      setImages([result.collection.items])
+      setImages([result.collection])
     } catch (error) {
       setError('Sorry, but something went wrong.')
     }
@@ -45,6 +45,7 @@ const SearchForm = () => {
     showThumbnails: false,
   };
 
+  console.log(images)
   return (
     <div>
       <form className="SearchForm" onSubmit={performQuery}>

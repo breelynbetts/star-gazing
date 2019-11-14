@@ -102,38 +102,36 @@ describe('API calls', () => {
     // To manage size, we supply a mock response that contains _only_ what the app will need. This does mean
     // that we need to revise the mock response if our app starts using more (or different) data.
     api.searchNasa.returns(Promise.resolve({
-      data: [
+      collection: 
         {
-          "collection": {
-            "metadata": {
-              "total_hits": 596
-            },
-            "version": "1.0",
-            "items": [{
-              "data": [
-                {
-                  "description_508": "NASA's GALEX reveals the true nature of UGC 1382, dubbed the Frankenstein galaxy. Scientists have discovered that UGC 1382 is a giant, and one of the largest isolated galaxies known.",
-                  "center": "JPL",
-                  "nasa_id": "PIA20695",
-                  "description": "The galaxy UGC 1382 has been revealed to be far larger and stranger than previously thought. Astronomers relied on a combination of ground-based and space telescopes to uncover the true nature of this \"Frankenstein galaxy.\" The composite image shows the same galaxy as viewed with different instruments. The component images are also available.  In the image at left, UGC 1382 appears to be a simple elliptical galaxy, based on optical data from the Sloan Digital Sky Survey (SDSS). But spiral arms emerged when astronomers incorporated ultraviolet data from the Galaxy Evolution Explorer (GALEX) and deep optical data from SDSS, as seen in the middle image. Combining that with a view of low-density hydrogen gas (shown in green), detected at radio wavelengths by the Very Large Array, scientists discovered that UGC 1382 is a giant, and one of the largest isolated galaxies known.  GALEX in particular was able detect very faint features because it operated from space, which is necessary for UV observations because ultraviolet light is absorbed by the Earth's atmosphere. Astronomers also used Stripe 82 of SDSS, a small region of sky where SDSS imaged the sky 80 times longer than the original standard SDSS survey. This enabled optical detection of much fainter features as well.  http://photojournal.jpl.nasa.gov/catalog/PIA20695",
-                  "secondary_creator": "NASA/JPL/Caltech/SDSS/NRAO",
-                  "date_created": "2016-07-11T15:50:52Z",
-                  "keywords": [
-                    "Galaxy Evolution Explorer GALEX"
-                  ],
-                  "title": "Frankenstein Galaxy",
-                  "media_type": "image"
-                }
-              ],
-              "links": [{
-                "render": "image",
-                "rel": "preview",
-                "href": "https://images-assets.nasa.gov/image/PIA20695/PIA20695~thumb.jpg"
-              }],
-              "href": "https://images-assets.nasa.gov/image/PIA20695/collection.json"
-            }]
-        }
-      }]
+          "metadata": {
+            "total_hits": 596
+          },
+          "version": "1.0",
+          "items": [{
+            "data": [
+              {
+                "description_508": "NASA's GALEX reveals the true nature of UGC 1382, dubbed the Frankenstein galaxy. Scientists have discovered that UGC 1382 is a giant, and one of the largest isolated galaxies known.",
+                "center": "JPL",
+                "nasa_id": "PIA20695",
+                "description": "The galaxy UGC 1382 has been revealed to be far larger and stranger than previously thought. Astronomers relied on a combination of ground-based and space telescopes to uncover the true nature of this \"Frankenstein galaxy.\" The composite image shows the same galaxy as viewed with different instruments. The component images are also available.  In the image at left, UGC 1382 appears to be a simple elliptical galaxy, based on optical data from the Sloan Digital Sky Survey (SDSS). But spiral arms emerged when astronomers incorporated ultraviolet data from the Galaxy Evolution Explorer (GALEX) and deep optical data from SDSS, as seen in the middle image. Combining that with a view of low-density hydrogen gas (shown in green), detected at radio wavelengths by the Very Large Array, scientists discovered that UGC 1382 is a giant, and one of the largest isolated galaxies known.  GALEX in particular was able detect very faint features because it operated from space, which is necessary for UV observations because ultraviolet light is absorbed by the Earth's atmosphere. Astronomers also used Stripe 82 of SDSS, a small region of sky where SDSS imaged the sky 80 times longer than the original standard SDSS survey. This enabled optical detection of much fainter features as well.  http://photojournal.jpl.nasa.gov/catalog/PIA20695",
+                "secondary_creator": "NASA/JPL/Caltech/SDSS/NRAO",
+                "date_created": "2016-07-11T15:50:52Z",
+                "keywords": [
+                  "Galaxy Evolution Explorer GALEX"
+                ],
+                "title": "Frankenstein Galaxy",
+                "media_type": "image"
+              }
+            ],
+            "links": [{
+              "render": "image",
+              "rel": "preview",
+              "href": "https://images-assets.nasa.gov/image/PIA20695/PIA20695~thumb.jpg"
+            }],
+            "href": "https://images-assets.nasa.gov/image/PIA20695/collection.json"
+          }]
+      }
     }))
 
     div = await setupAndQuerySearchForm()
