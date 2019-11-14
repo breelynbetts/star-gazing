@@ -34,7 +34,7 @@ function DateSelector() {
   return (
       <div>
         <form className="DatePicker" onSubmit={handleInput}>
-          <input name="query" type="date" value={query} onChange={handleQueryChange} max={ moment().format('YYYY-MM-DD')}/>
+          <input name="query" type="date" value={query} onChange={handleQueryChange} min={'1995-06-21'} max={ moment().format('YYYY-MM-DD')}/>
           <div className="ButtonDiv">
             <button type="submit" disabled={!query}>select date</button>
           </div>

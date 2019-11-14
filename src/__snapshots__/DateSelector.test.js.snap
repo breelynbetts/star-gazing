@@ -8,6 +8,7 @@ exports[`should start with a disabled selection button 1`] = `
   >
     <input
       max="2019-11-14"
+      min="1995-06-21"
       name="query"
       onChange={[Function]}
       type="date"
@@ -42,6 +43,7 @@ exports[`should start with no date selected 1`] = `
   >
     <input
       max="2019-11-14"
+      min="1995-06-21"
       name="query"
       onChange={[Function]}
       type="date"

@@ -29,6 +29,11 @@ function Map() {
     
     return (
         <div>
+            {error && (
+            <div className="error">
+                {error}
+            </div>
+            )}
         <GoogleMap
             defaultZoom={1.5}
             defaultCenter={{ lat: 0, lng: 0}}
@@ -71,11 +76,6 @@ function Map() {
                 )
             })}
         </GoogleMap>
-        {error && (
-            <div className="error">
-                {error}
-            </div>
-        )}
         </div>
 )}
 

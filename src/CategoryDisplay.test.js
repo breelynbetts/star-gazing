@@ -6,9 +6,7 @@ import ReactTestUtils from 'react-dom/test-utils'
 import sinon from 'sinon'
 
 import * as api from './api'
-import CategorySelection from './CategorySelection'
 import CategoryDisplay from './CategoryDisplay'
-
 
 it('should start with events on the page', () => {
   const component = TestRenderer.create(<CategoryDisplay />)
@@ -29,9 +27,7 @@ describe('API calls', () => {
     let div
     beforeEach(async () => {
       sinon.stub(api, 'getCategories')
-  
-      // To manage size, we supply a mock response that contains _only_ what the app will need. This does mean
-      // that we need to revise the mock response if our app starts using more (or different) data.
+
       api.getCategories.returns(Promise.resolve({
         categories: [
             {
