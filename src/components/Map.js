@@ -38,7 +38,7 @@ function Map() {
                     <div>
                         {loc.geometries.map((coord) => {
                             return (
-                            <div>
+                            <div className='markers'>
                                 <Marker 
                                     key={coord.date}
                                     position={{
