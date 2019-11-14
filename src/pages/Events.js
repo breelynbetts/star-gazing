@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import CategorySelection from '../CategorySelection.js'
-// import Map from '../components/Map.js'
+import CategoriesModal from '../CategoriesModal'
 
 import '../style/Events.css'
 
@@ -11,6 +11,7 @@ class Events extends Component {
             <div>
                 <h1 className='eventsTitle'>Current Events</h1>
                 {/* <Map /> */}
+                <CategoriesModal />
                 <CategorySelection />
             </div>
         )

@@ -6,7 +6,6 @@ import { apiHost } from './api'
 
 import moment from 'moment'; 
 import {MapContainer, Map} from './components/Map.js'
-import CategoriesModal from './CategoriesModal'
 
 function CategorySelection() {
     const [data, setData] = useState([])
@@ -18,7 +17,7 @@ function CategorySelection() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const result = await searchEvents({limit: 5});
+                const result = await searchEvents({limit: 8});
                 setData(result.events)
                 setLocations(result.events)
             } catch (e) {
@@ -28,24 +27,23 @@ function CategorySelection() {
         fetchData();
       }, []);
 
+    console.log(data)
+
     return (
         <div>
-            {locations === undefined ? <div>Working on displaying map ... </div> :
-                <MapContainer>
-                    <Map results={data}/>
-                </MapContainer>
-            }
+            <MapContainer>
+                <Map />
+            </MapContainer>
            <span >
-               <CategoriesModal />
            {data === undefined ? <div>Loading ...</div> : 
-            <div>
+            <div className='events'>
                 {data.map((event) => {
                     return (
                         <div className='eventColumns'> 
                             <div key={event.id} className='eventDiv'>
-                                <h4 className='eventName'key={event.id}>{event.title}</h4 >
-                                <h5>Event Category: {event.categories[0].title}</h5>  
-                                <p>{moment(event.geometries[0].date).format('LLLL')}</p>
+                                <p className='eventName'key={event.id}>{event.title}</p>
+                                <p className='date'>{moment(event.geometries[0].date).format('LLLL')}</p>
+                                <p className="category">Event Category: {event.categories[0].title}</p>  
                             </div>
                         </div>
                     )

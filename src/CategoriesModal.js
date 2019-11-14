@@ -2,6 +2,7 @@ import React from 'react';
 import Modali, { useModali } from 'modali';
 
 import CategoryDisplay from './CategoryDisplay.js'
+import './style/CategoriesModal.css'
 
 const CategoriesModal = () => {
     const [descriptionShow, toggleDescription] = useModali({
@@ -11,8 +12,8 @@ const CategoriesModal = () => {
 
     return (
         <div className='categoryModal'>
-            <button onClick={toggleDescription}>
-                Event Category Descriptions!
+            <button onClick={toggleDescription} className='modalButton'>
+                Click for Event Descriptions
             </button>
             <Modali.Modal {...descriptionShow}>
                 <CategoryDisplay />

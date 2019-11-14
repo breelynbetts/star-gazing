@@ -2,40 +2,35 @@
 
 .eventName {
     font-family: 'Staatliches', cursive;
-    font-size: 20px;
+    font-size: 23px;
+    margin-bottom: 0px;
 }
 
 .eventDiv {
-    width: 46%;
-    margin-bottom: 15px;
     border: 1px solid black;
     float:left;
-    margin-right:2%;
+    width: 47%;
+    margin-left: 2%;
 }
-.span {
-    margin-top: 500px;
-}
+
 .eventDiv:first-child {
-    margin-top: 35px;
+    margin-bottom: 20px;
 }
 
 .eventDiv p {
     font-family: 'Staatliches', sans-serif;
-    width: 60%;
-    margin-left: 20%;
 }
 
-.eventDiv:last-child {
-    
+.category {
+    font-size: 14px;
 }
 
-h5 {
-    font-family: 'Staatliches', cursive;
-    font-size: 17px;
+.date {
+    font-size: 18px;
 }
 
 .eventColumns {
     width: 80%;
     background: orange;
-    margin-left: 15%;
+    margin-left:10%;
 }

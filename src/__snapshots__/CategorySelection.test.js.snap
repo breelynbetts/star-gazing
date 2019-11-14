@@ -6,6 +6,7 @@ exports[`should start with events on the page 1`] = `
     style={
       Object {
         "height": "425px",
+        "marginBottom": "25px",
         "marginLeft": "25%",
         "position": "relative",
         "width": "50%",
@@ -23,15 +24,8 @@ exports[`should start with events on the page 1`] = `
   </div>
   <span>
     <div
-      className="categoryModal"
-    >
-      <button
-        onClick={[Function]}
-      >
-        Event Category Descriptions!
-      </button>
-    </div>
-    <div />
+      className="events"
+    />
   </span>
 </div>
 `;

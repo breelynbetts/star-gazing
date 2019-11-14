@@ -1,0 +1,14 @@
+.modalButton {   
+    height: 25px;
+    border-radius: 8px;
+    border: 1px solid black;
+    font-family: 'Staatliches', cursive;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    width: 250px;
+    margin-bottom: 15px;
+}
+
+.modalButton:hover {
+    background-color: #AADAFF;
+}

@@ -14,8 +14,8 @@
     margin-top: 0px;
 }
 .columns {
-    width: 28%;
-    float: left;
-    height: 120px;
-    margin-left: 4%; 
+    width: 47%;
+    float: right;
+    max-height: 97px;
+    margin-right: 2%;
 }

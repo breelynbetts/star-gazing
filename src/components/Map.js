@@ -18,7 +18,7 @@ function Map() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const result = await searchEvents({limit: 5});
+                const result = await searchEvents({limit: 8});
                 setLocations(result.events)
             } catch (e) {
                 setError('Sorry, but something went wrong.')
@@ -28,6 +28,7 @@ function Map() {
       }, []);
     
     return (
+        <div>
         <GoogleMap
             defaultZoom={1.5}
             defaultCenter={{ lat: 0, lng: 0}}
@@ -70,13 +71,19 @@ function Map() {
                 )
             })}
         </GoogleMap>
+        {error && (
+            <div className="error">
+                {error}
+            </div>
+        )}
+        </div>
 )}
 
 const MapWrapped = withScriptjs(withGoogleMap(Map));
 
 function MapContainer() {
     return (
-        <div style={{ width: "50%", height: "425px", marginLeft: "25%", position:'relative', zIndex:'0'}}>
+        <div style={{ width: "50%", height: "425px", marginLeft: "25%", position:'relative', zIndex:'0', marginBottom:'25px'}}>
           <MapWrapped
             googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${
               process.env.REACT_APP_GOOGLE_KEY
