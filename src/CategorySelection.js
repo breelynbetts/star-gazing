@@ -10,7 +10,6 @@ import {MapContainer, Map} from './components/Map.js'
 function CategorySelection() {
     const [data, setData] = useState([])
     const [error, setError] = useState(null)
-    const [locations, setLocations] = useState([])
     
     useEffect(() => apiHost('http://localhost:4000'))
 
@@ -19,7 +18,6 @@ function CategorySelection() {
             try {
                 const result = await searchEvents({limit: 8});
                 setData(result.events)
-                setLocations(result.events)
             } catch (e) {
                 setError('Sorry, but something went wrong.')
             }

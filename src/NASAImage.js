@@ -4,12 +4,14 @@ import { SRLWrapper } from "simple-react-lightbox";
 
 const NASAImage = props => {
   const { image } = props
-  console.log(image)
+  console.log('image', image)
   return (
     <div className="NASAImage">
       <SRLWrapper>
       {image === undefined ? <div>Loading...</div> :
       <div>
+        {!image[0] ? <div className='noResults'>No results found. Search again!<p>Try: 'Milky Way', 'Star', 'Galaxy' </p></div> :
+        <div>
         {image.map((item, index) => {
           return (
             <div key={index}>
@@ -24,7 +26,8 @@ const NASAImage = props => {
             </div>
           )
         })}
-        
+        </div>
+      }
       </div>
     }
       </SRLWrapper>

@@ -16,7 +16,6 @@ it('should start with map on the page', () => {
   expect(tree).toMatchSnapshot()
 })
 
-
 describe(`GoogleMap`, () => {
     it(`should render`, () => {
         const googleMap = (

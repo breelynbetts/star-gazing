@@ -5,3 +5,13 @@
     height: 375px;
     object-fit: cover;
 }
+
+.noResults {
+    font-family: 'Staatliches', cursive;
+    margin-top: 30px;
+    font-size: 20px;
+
+}
+.noResults p {
+    margin-top: 0px;
+}
