@@ -17,6 +17,8 @@ it('renders correctly', () => {
   expect(result).toMatchSnapshot()
 })
 
+
+
 // const setupAndLoadPage = async () => {
 //   const renderer = new ShallowRenderer();
 //   const result = renderer.render(<Map />)
