@@ -5,7 +5,6 @@ import './style/CategorySelection.css'
 import { apiHost } from './api'
 
 import moment from 'moment'; 
-import {MapContainer, Map} from './components/Map.js'
 
 function CategorySelection() {
     const [data, setData] = useState([])
@@ -29,9 +28,6 @@ function CategorySelection() {
 
     return (
         <div>
-            <MapContainer>
-                <Map />
-            </MapContainer>
            <span >
            {data === undefined ? <div>Loading ...</div> : 
             <div className='events'>

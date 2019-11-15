@@ -1,26 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GoogleMap should render 1`] = `null`;
-
-exports[`should start with map on the page 1`] = `
+exports[`renders correctly 1`] = `
 <div
-  style={
-    Object {
-      "height": "425px",
-      "marginBottom": "25px",
-      "marginLeft": "25%",
-      "position": "relative",
-      "width": "50%",
-      "zIndex": "0",
-    }
-  }
+  className="map"
 >
-  <div
-    style={
+  <GoogleMap
+    defaultCenter={
       Object {
-        "height": "100%",
+        "lat": 0,
+        "lng": 0,
       }
     }
+    defaultZoom={1.5}
   />
 </div>
 `;

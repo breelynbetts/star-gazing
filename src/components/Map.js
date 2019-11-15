@@ -28,7 +28,7 @@ function Map() {
       }, []);
     
     return (
-        <div>
+        <div className='map'>
             {error && (
             <div className="error">
                 {error}
@@ -40,7 +40,7 @@ function Map() {
         >
             {locations.map((loc) => {
                 return (
-                    <div>
+                    <div className='mapData'>
                         {loc.geometries.map((coord) => {
                             return (
                             <div className='markers'>
