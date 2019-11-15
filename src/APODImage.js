@@ -5,7 +5,7 @@ import "./style/APODImage.css"
 const APODImage = props => {
   const { image } = props
   return (
-    <div className="APODImage" key={image.data}>
+    <div className="APODImage" key={image.date}>
       <img className='apod'src={image.url} alt={image.date} />
       <div className='descriptionDiv'>
         <h2 className='readTitle'>{image.title}</h2>

@@ -161,3 +161,26 @@ describe('failed API calls', () => {
     expect(searchError.textContent).toEqual('Sorry, but something went wrong.')
   })
 })
+
+describe('loading API data', () => {
+  let div
+  beforeEach(async () => {
+    sinon.stub(api, 'searchNasa')
+    api.searchNasa.returns(Promise.resolve({
+      collection: []
+    }))
+
+    div = await setupAndQuerySearchForm()
+  })
+
+  afterEach(() => {
+    ReactDOM.unmountComponentAtNode(div)
+    api.searchNasa.restore()
+  })
+
+  it('should display loading when data is not shown', () => {
+    // The document should contain the error div.
+    const searchUndefined = div.querySelector('div.ImageResults')
+    expect(searchUndefined.textContent).toEqual('Loading...')
+  })
+})

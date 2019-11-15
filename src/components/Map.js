@@ -40,10 +40,10 @@ function Map() {
         >
             {locations.map((loc) => {
                 return (
-                    <div className='mapData'>
+                    <div className='mapData' key={loc.id}>
                         {loc.geometries.map((coord) => {
                             return (
-                            <div className='markers'>
+                            <div className='markers' key={coord.date}>
                                 <Marker 
                                     key={coord.date}
                                     position={{

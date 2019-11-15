@@ -24,8 +24,6 @@ function CategorySelection() {
         fetchData();
       }, []);
 
-    console.log(data)
-
     return (
         <div>
            <span >
@@ -33,7 +31,7 @@ function CategorySelection() {
             <div className='events'>
                 {data.map((event) => {
                     return (
-                        <div className='eventColumns'> 
+                        <div className='eventColumns' key={event.id}> 
                             <div key={event.id} className='eventDiv'>
                                 <p className='eventName'key={event.id}>{event.title}</p>
                                 <p className='date'>{moment(event.geometries[0].date).format('LLLL')}</p>

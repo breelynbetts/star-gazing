@@ -30,11 +30,11 @@ function CategoryDisplay() {
                     {error}
                 </div>
             )}
-            {data == undefined ? <div>loading categories</div> :
+            {data === undefined ? <div>loading categories</div> :
                 <div>
                     {data.map((category) => {
                         return (
-                            <div className='categories'>
+                            <div className='categories' key={category.id}>
                                 <div className='columns'>
                                     <p className='categoryTitle'>{category.title}</p>
                                     <p className='categoryDescription'>{category.description}</p>

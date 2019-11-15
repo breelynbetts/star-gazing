@@ -4,7 +4,6 @@ import { SRLWrapper } from "simple-react-lightbox";
 
 const NASAImage = props => {
   const { image } = props
-  console.log('image', image)
   return (
     <div className="NASAImage">
       <SRLWrapper>
@@ -17,8 +16,8 @@ const NASAImage = props => {
             <div key={index}>
               {item.links.map((link) => {
               return (
-                  <a href = {link.href} data-attribute="SRL">
-                    <img src={link.href} alt={item.data[0].nasa_id} key={item.data[0].nasa_id} alt={item.data[0].title}/>
+                  <a href = {link.href} data-attribute="SRL" key={item.data[0].nasa_id}>
+                    <img src={link.href} alt={item.data[0].nasa_id} key={item.data[0].nasa_id}/>
                   </a>
               )
               })}

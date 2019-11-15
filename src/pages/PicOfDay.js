@@ -9,8 +9,7 @@ class PicOfDay extends Component {
         return (
             <div>
                 <h1 className='apodTitle'>Astronomy Picture of the Day!</h1>
-                <DateSelector /> 
-                
+                <DateSelector />      
             </div>
         )
     }

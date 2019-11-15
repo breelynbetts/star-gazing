@@ -22,8 +22,6 @@ class Home extends Component {
                     The Astronomy Picture of the Day displays a picture provided by the NASA 
                     Api, along with a description of that picture, for a day of your choice! 
                 </p>
-
-
                 </div>
             </div>
         )

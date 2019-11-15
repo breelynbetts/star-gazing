@@ -45,7 +45,6 @@ const SearchForm = () => {
     showThumbnails: false,
   };
 
-  console.log(images)
   return (
     <div>
       <form className="SearchForm" onSubmit={performQuery}>
