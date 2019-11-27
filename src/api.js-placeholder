@@ -1,9 +1,7 @@
 const apiHost = () => {} // No-op in our mock version.
 
 const searchNasa = () => Promise.resolve({
-  data: [
-    {
-      "collection": {
+  collection: {
         "metadata": {
           "total_hits": 596
         },
@@ -117,11 +115,9 @@ const searchNasa = () => Promise.resolve({
           "href": "https://images-assets.nasa.gov/image/PIA17554/collection.json"
         }
       ]}
-    }]
 })
 
 const searchAstronomyPicture = () => Promise.resolve({
-  data: [{
     "copyright": "Eric Wagner",
     "date": "2019-10-10",
     "explanation": "On September 24, a late evening commercial flight from Singapore to Australia offered stratospheric views of the southern hemisphere's night sky, if you chose a window seat. In fact, a well-planned seating choice with a window facing toward the Milky Way allowed the set up of a sensitive digital camera on a tripod mount to record the galaxy's central bulge in a series of 10 second long exposures.  By chance, one of the exposures caught this bright fireball meteor in the starry frame. Reflected along the wing of the A380 aircraft, the brilliant greenish streak is also internally reflected in the double layer window, producing a fainter parallel to the original meteor track. In the southern sky Jupiter is the bright source beneath the galactic bulge and seen next to a green beacon, just off the wing tip.",
@@ -130,16 +126,11 @@ const searchAstronomyPicture = () => Promise.resolve({
     "service_version": "v1",
     "title": "Mid-Air Meteor and Milky Way",
     "url": "https://apod.nasa.gov/apod/image/1910/MWBolideEricWagner1200.jpg"
-  }]
-
+  
 })
 
 const searchEvents = () => Promise.resolve({
-  data: [{
-    "title": "EONET Events",
-    "description": "Natural events from EONET.",
-    "link": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/events",
-    "events": [
+  events: [
       {
         "id": "EONET_4475",
         "title": "Wildfires - Los Angeles County (Tick Fire), California, United States",
@@ -223,6 +214,15 @@ const searchEvents = () => Promise.resolve({
             ]
           }]
       }]
+})
+
+const getCategories = () => Promise.resolve({
+  categories: [{
+    "id": 6,
+    "title": "Drought",
+    "link": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/categories/6",
+    "description": "Long lasting absence of precipitation affecting agriculture and livestock, and the overall availability of food and water.",
+    "layers": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/layers/6"
   }]
 })
 
@@ -230,5 +230,6 @@ export {
   apiHost,
   searchNasa,
   searchAstronomyPicture,
-  searchEvents
+  searchEvents,
+  getCategories
 }
