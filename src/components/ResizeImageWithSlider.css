@@ -1,0 +1,33 @@
+.SliderCircle {
+  border: 1px solid black;
+  user-select: none;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  margin-top:-10px;
+  margin-left:-1px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.SliderCircle .onMouseDown {
+  background-color: grey;
+}
+
+.Slider {
+  border: 1px solid black;
+  height: 1px;
+  background-color: black;
+  width: 217px;
+  display: block;
+}
+.title {
+  margin-top: 45px;
+}
+
+img {
+  object-fit: cover;
+  height: 250px;
+  width: 250px;
+  margin-top: 30px;
+}
