@@ -1,5 +1,6 @@
 import React from 'react'
 import "./style/NASAImage.css"
+import ResizeImageWithSlider from './components/ResizeImageWithSlider'
 import { SRLWrapper } from "simple-react-lightbox"; 
 
 const NASAImage = props => {

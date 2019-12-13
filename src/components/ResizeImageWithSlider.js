@@ -74,7 +74,7 @@ const ResizeImageWithSlider = props => {
       <div className="Slider">
         <div className="SliderCircle" onMouseDown={handleMouseDown} style={currentStyle()}></div>
       </div>
-      <img style={imgStyle()} src={img}/>
+      <img className="SliderImage" style={imgStyle()} src={img}/>
     </div>
   )
 }

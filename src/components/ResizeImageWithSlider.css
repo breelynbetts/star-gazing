@@ -25,9 +25,10 @@
   margin-top: 45px;
 }
 
-img {
+.SliderImage {
   object-fit: cover;
   height: 250px;
   width: 250px;
   margin-top: 30px;
+  float: left;
 }
