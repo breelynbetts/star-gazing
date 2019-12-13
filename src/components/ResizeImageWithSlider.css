@@ -3,7 +3,6 @@
   user-select: none;
   width: 20px;
   height: 20px;
-  position: absolute;
   margin-top:-10px;
   margin-left:-1px;
   border-radius: 50%;
@@ -16,13 +15,16 @@
 
 .Slider {
   border: 1px solid black;
-  height: 1px;
+  height: 2px;
+  border-radius: 10px;
   background-color: black;
   width: 217px;
   display: block;
 }
+
 .title {
   margin-top: 45px;
+  height: 300px;
 }
 
 .SliderImage {
