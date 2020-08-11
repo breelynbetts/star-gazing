@@ -1,37 +1,15 @@
-## Welcome to GitHub Pages
+## Star Gazing 
 
-You can use the [editor on GitHub](https://github.com/breelynbetts/react/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This application was created by Breelyn Betts using different endpoints of the Nasa API and the Google Maps Api.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Get Started: 
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```1. git clone 
+2. cd react/
+3. npm install
+4. npm start 
+// One of the endpoints does not work unless a Node Relay is also run, in order to do so run the command in a separate terminal window: 
+5. node node-http-relay.js
+6. navigate to http://localhost:3000/ to see the project! 
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/breelynbetts/react/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
