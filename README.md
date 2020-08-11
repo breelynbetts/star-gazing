@@ -5,7 +5,7 @@ This application was created by Breelyn Betts using different endpoints of the N
 ### Get Started: 
 
 ```
-1. git clone 
+1. git clone https://github.com/breelynbetts/react.git
 2. cd react/
 3. npm install
 4. npm start 
@@ -14,3 +14,9 @@ This application was created by Breelyn Betts using different endpoints of the N
 6. navigate to http://localhost:3000/ to see the project! 
 ```
 
+To see testing : 
+``` 
+1. npm test
+```
+
+This project was built in the class CMSI 370 - Interaction Design. 
