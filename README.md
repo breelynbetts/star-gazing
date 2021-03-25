@@ -1,22 +1,24 @@
-## Star Gazing 
+# Star Gazing
 
 This application was created by Breelyn Betts using different endpoints of the Nasa API and the Google Maps Api.
 
-### Get Started: 
+## Get Started:
 
 ```
-1. git clone https://github.com/breelynbetts/react.git
-2. cd react/
+1. git clone https://github.com/breelynbetts/star-gazing.git
+2. cd star-gazing/
 3. npm install
-4. npm start 
-// One of the endpoints does not work unless a Node Relay is also run, in order to do so run the command in a separate terminal window: 
+4. npm start
+// Because of CORS, a Node Relay is required for the app to function properly
+// In a separate terminal window run the command:
 5. node node-http-relay.js
-6. navigate to http://localhost:3000/ to see the project! 
+6. navigate to http://localhost:3000/ to see the project!
 ```
 
-To see testing : 
-``` 
+To see testing :
+
+```
 1. npm test
 ```
 
-This project was built in the class CMSI 370 - Interaction Design. 
+This project was built in [CMSI 370 - Interaction Design](https://bulletin.lmu.edu/preview_course_nopop.php?catoid=2&coid=4753).
